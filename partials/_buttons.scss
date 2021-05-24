@@ -1,30 +1,57 @@
-.btn{
-    @include flex_default;    
+.btn {
+    @include flex_default;
     padding: $base_Spacing/ 2;
-    font-size: $min_font_size*1.5;
+    font-size: $min_font_size * 1.5;
     color: $Color_Cube_sugar_cane;
-    i{
-        &.fa-chevron-right{
+    transition: .3s;
+
+    i {
+        &.fa-chevron-right {
             padding-left: $base_Spacing/2;
         }
     }
 
-    &.invisible{
-    border: 1px solid $Color_Cube_sugar_cane;
-        &:hover{
+    &.invisible {
+        border: 1px solid $Color_Cube_sugar_cane;
+        &:hover {
             background-color: $Color_Cube_sugar_cane;
             color: $Color_Cube_butterfly-bush;
             border-color: $Color_Cube_butterfly-bush;
         }
     }
 
-    &.orange{
+    &.orange {
         background-color: $Color_Cube_blaze-orange;
         border: 1px solid transparent;
-        &:hover{
+        &:hover {
             background-color: transparent;
             color: $Color_Cube_blaze-orange;
             border: 1px solid $Color_Cube_blaze-orange;
         }
+    }
+
+    &.baloon {
+        position: relative;
+        display: inline-block;
+        color: $Material_Design_tuatara;
+        margin-right: $base_Spacing/2;
+       &:hover{
+         background-color: $Color_Cube_blaze-orange;
+         color: $Color_Cube_sugar_cane;
+        &::after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 15px 10px 0 10px;
+            border-color: $Color_Cube_blaze-orange transparent transparent transparent;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+        }
+
+       }
     }
 }

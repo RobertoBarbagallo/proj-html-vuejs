@@ -10,6 +10,7 @@ header {
                 @include flex_default;
                 padding: $base_Spacing * 3 $base_Spacing $base_Spacing $base_Spacing;
                 flex-direction: column;
+                transition: .3s;
 
                 img {
                     width: 25px;

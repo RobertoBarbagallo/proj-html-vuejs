@@ -51,4 +51,8 @@ section {
             padding: 0 $base_Spacing*2
         }
     }
+
+    &.grey{
+        background-color: $Median_Cut_bon-jour;
+    }
 }

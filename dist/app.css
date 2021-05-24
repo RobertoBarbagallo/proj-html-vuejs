@@ -66,6 +66,11 @@ ul {
   padding: 20px 0;
 }
 
+.col-6 {
+  width: calc(100% / 2);
+  padding: 20px 0;
+}
+
 .fade-enter-active {
   transition: all 0.3s ease;
 }
@@ -91,6 +96,7 @@ header nav ul li {
   align-items: center;
   padding: 60px 20px 20px 20px;
   flex-direction: column;
+  transition: 0.3s;
 }
 header nav ul li img {
   width: 25px;
@@ -181,6 +187,9 @@ section .col-3 h3 {
 section .col-3 p {
   padding: 0 40px;
 }
+section.grey {
+  background-color: #E8E6E7;
+}
 
 .btn {
   display: flex;
@@ -188,6 +197,7 @@ section .col-3 p {
   padding: 10px;
   font-size: 15px;
   color: #FEFFFE;
+  transition: 0.3s;
 }
 .btn i.fa-chevron-right {
   padding-left: 10px;
@@ -208,6 +218,29 @@ section .col-3 p {
   background-color: transparent;
   color: #FE6602;
   border: 1px solid #FE6602;
+}
+.btn.baloon {
+  position: relative;
+  display: inline-block;
+  color: #242423;
+  margin-right: 10px;
+}
+.btn.baloon:hover {
+  background-color: #FE6602;
+  color: #FEFFFE;
+}
+.btn.baloon:hover::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 10px 0 10px;
+  border-color: #FE6602 transparent transparent transparent;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
 }
 
 .round {

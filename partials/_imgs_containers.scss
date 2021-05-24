@@ -1,0 +1,21 @@
+.round{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    &.orange{
+        background-color: $Color_Cube_blaze-orange;
+    }
+
+    &.purple{
+        background-color: $Color_Cube_butterfly-bush;
+    }
+    img{
+        width: 60px;
+        object-fit: contain;
+    }
+}

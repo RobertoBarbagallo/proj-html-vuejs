@@ -39,4 +39,16 @@ section {
         margin: auto;
         padding: $base_Spacing *2;
     }
+
+    .col-3{
+        h3{
+            padding: $base_Spacing*2 0;
+            text-align: center;
+            color: $Color_Cube_butterfly-bush;
+        }
+
+        p{
+            padding: 0 $base_Spacing*2
+        }
+    }
 }

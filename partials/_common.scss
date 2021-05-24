@@ -60,3 +60,9 @@ ul{
         margin-bottom: 10px;
     }
 }
+
+
+.col-3{
+    width:  calc(100% / 4) ;
+    padding: $base_Spacing 0;
+}

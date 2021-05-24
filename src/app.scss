@@ -1,0 +1,16 @@
+
+
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/common";
+
+//Elementi principali
+@import "partials/header";
+@import "partials/main";
+@import "partials/footer";
+
+
+//Singoli elementi
+@import "partials/buttons";
+@import "partials/navbar";
+@import "partials/imgs";

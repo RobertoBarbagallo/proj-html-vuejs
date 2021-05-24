@@ -58,16 +58,19 @@ new Vue({
         background: "public/imgs/slider_slide1_background.png",
         leftImg: "public/imgs/slider_slide1_img1.png",
         rightImg: "public/imgs/slider_slide1_img2.png",
+        id: 1,
       },
       {
         background: "public/imgs/slider_slide2_background.png",
         leftImg: "public/imgs/slider_slide2_img1.png",
         rightImg: "public/imgs/slider_slide2_img2.png",
+        id: 2,
       },
       {
         background: "public/imgs/slider_slide3_background.png",
         leftImg: "public/imgs/slider_slide3_img2.png",
         rightImg: "public/imgs/slider_slide3_img3.png",
+        id: 3,
       },
 
     ],
@@ -126,7 +129,7 @@ new Vue({
 
       this.interval = setInterval(() => {
         this.rightClick(true);
-        }, 2000);
+        }, 4000);
     }
 
 

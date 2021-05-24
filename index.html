@@ -34,17 +34,19 @@
         </div>
       </div>
       <div class="hero" tabindex="-1" @keyup.left="leftClick" @keyup.right= "rightClick(false)">
-        <div class="sliderCenter" :style="{ backgroundImage: 'url(' + heroSliderList[defaultVueImg].background + ')' }">
-          <div class="imgContainer left">
-            <img :src="heroSliderList[defaultVueImg].leftImg" alt="">
+        <transition-group name="fade">
+          <div class="sliderCenter" :key="heroSliderList[defaultVueImg].id" :style="{ backgroundImage: 'url(' + heroSliderList[defaultVueImg].background + ')' }">
+            <div class="imgContainer left">
+              <img :src="heroSliderList[defaultVueImg].leftImg" alt="">
+            </div>
+            <div class="imgContainer right">
+              <img :src="heroSliderList[defaultVueImg].rightImg" alt="">
+            </div>
+            <div class="dotsContainer">
+              <div v-for="(slide, indice) in heroSliderList" @click="dotClick(indice)" :class="{up: indice == defaultVueImg}" class="dot"></div>
+            </div>
           </div>
-          <div class="imgContainer right">
-            <img :src="heroSliderList[defaultVueImg].rightImg" alt="">
-          </div>
-          <div class="dotsContainer">
-            <div v-for="(slide, indice) in heroSliderList" @click="dotClick(indice)" :class="{up: indice == defaultVueImg}" class="dot"></div>
-          </div>
-        </div>
+        </transition-group>
       </div>
     </header>
     <main>

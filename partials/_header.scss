@@ -1,48 +1,45 @@
-header{
-
-    .flex-container{
+header {
+    .flex-container {
         align-items: center;
     }
-    
-    nav{
-        ul{
+
+    nav {
+        ul {
             @include flex_default;
-            li{
-                
+            li {
                 @include flex_default;
-                padding: $base_Spacing*3 $base_Spacing $base_Spacing $base_Spacing;
+                padding: $base_Spacing * 3 $base_Spacing $base_Spacing $base_Spacing;
                 flex-direction: column;
-    
-                img{
+
+                img {
                     width: 25px;
                     object-fit: contain;
-                    &.onHover{
+                    &.onHover {
                         display: none;
                     }
                 }
-    
-                &:hover{
+
+                &:hover {
                     background-color: $Color_Cube_blaze-orange;
-    
-                        & .normal{
-                            display: none;
-                        }
-    
-                        & .onHover{
-                            display: block;
-                        }   
+
+                    & .normal {
+                        display: none;
                     }
-                
+
+                    & .onHover {
+                        display: block;
+                    }
+                }
             }
         }
-    
     }
 
-   .hero{
-    &:focus, &:active{
-        outline: none;
-    }
-        .sliderCenter{
+    .hero {
+        &:focus,
+        &:active {
+            outline: none;
+        }
+        .sliderCenter {
             height: 600px;
             background-image: url(../public/imgs/slider_slide3_background.png);
             object-fit: contain;
@@ -50,33 +47,26 @@ header{
             display: flex;
             position: relative;
 
-            .imgContainer{
+            .imgContainer {
                 position: absolute;
                 bottom: 90px;
-                
-                &.left{
+
+                &.left {
                     width: 200px;
                     left: 40%;
                 }
 
-                &.right{
+                &.right {
                     width: 150px;
-                    left: 75%;  
+                    left: 75%;
                 }
 
-                img{
+                img {
                     width: 100%;
                     object-fit: contain;
                 }
             }
-
         }
 
-       
-        
-   }
-
-
+    }
 }
-
-

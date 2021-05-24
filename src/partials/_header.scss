@@ -1,3 +1,54 @@
 header{
-    padding: $base_Spacing 0;
-}
+
+    .flex-container{
+        align-items: center;
+    }
+    
+    nav{
+        ul{
+            @include flex_default;
+            li{
+                
+                @include flex_default;
+                padding: $base_Spacing*3 $base_Spacing $base_Spacing $base_Spacing;
+                flex-direction: column;
+    
+                img{
+                    width: 25px;
+                    object-fit: contain;
+                    &.onHover{
+                        display: none;
+                    }
+                }
+    
+                &:hover{
+                    background-color: $Color_Cube_blaze-orange;
+    
+                        & .normal{
+                            display: none;
+                        }
+    
+                        & .onHover{
+                            display: block;
+                        }
+                    
+                       
+                    }
+                }
+    
+            
+    
+            }
+        }
+    
+    }
+
+    .hero{
+        height: 600px;
+        background: url(public/images/slider_slide3_background.png);
+        object-fit: contain;
+        background-repeat: repeat-x;
+    }
+
+
+

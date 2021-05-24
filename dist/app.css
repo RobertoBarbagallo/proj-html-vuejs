@@ -24,8 +24,8 @@ ul {
 }
 
 .logo-container {
-  width: 120px;
-  height: 60px;
+  width: 160px;
+  height: 80px;
 }
 .logo-container img {
   width: 100%;
@@ -35,8 +35,44 @@ ul {
 
 .whitespace {
   flex-grow: 1;
+  height: 100%;
 }
 
-header {
-  padding: 20px 0;
+header .flex-container {
+  align-items: center;
+}
+header .hero {
+  height: 600px;
+  background: url();
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-repeat: repeat-x;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+nav ul li {
+  display: flex;
+  align-items: center;
+  padding: 60px 20px 20px 20px;
+  flex-direction: column;
+}
+nav ul li img {
+  width: 25px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+nav ul li img.onHover {
+  display: none;
+}
+nav ul li:hover {
+  background-color: #FE6602;
+}
+nav ul li:hover .normal {
+  display: none;
+}
+nav ul li:hover .onHover {
+  display: block;
 }

@@ -18,17 +18,34 @@
       <div class="container">
         <div class="flex-container">
           <div class="logo-container">
-            <img src="public/images/logo.png" alt="logo">
+            <img class="normal" src="public/images/logo.png" alt="logo">
           </div>
           <div class="whitespace"></div>
-          <ul>
-            <li v-for="li in  headerList">{{li.name}}</li>
-          </ul>
+          <nav>
+            <ul>
+              <li v-for="li in  headerList">
+                <img class="normal" :src="li.icon" alt="icon">
+                <img class="onHover" :src="li.iconOnHover" alt="icon">
+                {{li.name}}
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
-    </header>
-    <main></main>
-    <footer></footer>
+      <div class="hero">
+        <div class="sliderCenter">
+          <div class="imgContainer">
+            <img src="" alt="">
+          </div>
+          <div class="imgContainer">
+            <img src="" alt="">
+          </div>
+        </div>
+      </div>
+  </div>
+  </header>
+  <main></main>
+  <footer></footer>
   </div>
   <script src="scripts/app.js"></script>
 </body>

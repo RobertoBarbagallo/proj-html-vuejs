@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist/app.css">
-    <title>Fable</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/app.css">
+  <title>Fable</title>
+</head>
 
-  <body>
-    <div id="app">
-      <header>
-          <div class="container">
-            <div class="flex-container">
-              <div class="logo-container">
-                <img class="normal" src="public/images/logo.png" alt="logo">
-              </div>
-              <div class="whitespace"></div>
-              <nav>
-                <ul>
-                  <li v-for="li in  headerList">
-                    <img class="normal" :src="li.icon" alt="icon">
-                    <img class="onHover" :src="li.iconOnHover" alt="icon">
-                    {{li.name}}
-                  </li>
-                </ul>
-              </nav>
-            </div>
+<body>
+  <div id="app">
+    <header>
+      <div class="container">
+        <div class="flex-container">
+          <div class="logo-container">
+            <img class="normal" src="public/imgs/logo.png" alt="logo">
           </div>
-          <div class="hero">
-            <div class="sliderCenter">
-              <div class="imgContainer">
-                <img src="" alt="">
-              </div>
-              <div class="imgContainer">
-                <img src="" alt="">
-              </div>
-            </div>
+          <div class="whitespace"></div>
+          <nav>
+            <ul>
+              <li v-for="li in  headerList">
+                <img class="normal" :src="li.icon" alt="icon">
+                <img class="onHover" :src="li.iconOnHover" alt="icon">
+                {{li.name}}
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="hero" tabindex="-1" @keyup.left="leftClick" @keyup.right= "rightClick(false)">
+        <div class="sliderCenter" :style="{ backgroundImage: 'url(' + heroSliderList[defaultVueImg].background + ')' }">
+          <div class="imgContainer left">
+            <img :src="heroSliderList[defaultVueImg].leftImg" alt="">
           </div>
-        </header>
-      <main></main>
-      <footer></footer>
-    </div>
-    <script src="scripts/app.js"></script>
-  </body>
+          <div class="imgContainer right">
+            <img :src="heroSliderList[defaultVueImg].rightImg" alt="">
+          </div>
+          <div class="dotsContainer">
+            <div v-for="(slide, indice) in heroSliderList" @click="dotClick(indice)" :class="{up: indice == defaultVueImg}" class="dot"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main></main>
+    <footer></footer>
+  </div>
+  <script src="scripts/app.js"></script>
+</body>
 
 </html>

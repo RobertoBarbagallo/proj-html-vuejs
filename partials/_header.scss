@@ -72,29 +72,7 @@ header{
 
         }
 
-        .dotsContainer{
-            position: absolute;
-            padding: 20px 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-radius: 8px;
-        }
-        
-        .dot{
-            margin: 0 10px;
-            height: 10px;
-            width: 30px;
-            border: 1px solid $Color_Cube_blaze-orange;
-
-            &.up{
-                margin-bottom: 10px;
-            }
-        }
+       
         
    }
 

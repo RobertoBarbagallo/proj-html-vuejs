@@ -1,0 +1,30 @@
+.btn{
+    @include flex_default;    
+    padding: $base_Spacing/ 2;
+    font-size: $min_font_size*1.5;
+    color: $Color_Cube_sugar_cane;
+    i{
+        &.fa-chevron-right{
+            padding-left: $base_Spacing/2;
+        }
+    }
+
+    &.invisible{
+    border: 1px solid $Color_Cube_sugar_cane;
+        &:hover{
+            background-color: $Color_Cube_sugar_cane;
+            color: $Color_Cube_butterfly-bush;
+            border-color: $Color_Cube_butterfly-bush;
+        }
+    }
+
+    &.orange{
+        background-color: $Color_Cube_blaze-orange;
+        border: 1px solid transparent;
+        &:hover{
+            background-color: transparent;
+            color: $Color_Cube_blaze-orange;
+            border: 1px solid $Color_Cube_blaze-orange;
+        }
+    }
+}

@@ -144,11 +144,29 @@ section.withPattern {
 section.withPattern .flex-container {
   align-items: center;
 }
-section.withPattern .flex-container h1 {
+section.withPattern .flex-container h2 {
   color: #FEFFFE;
   font-weight: 100;
   font-size: 30px;
   flex-grow: 1;
+}
+section h1,
+section p {
+  font-weight: 100;
+  text-align: center;
+}
+section h1 {
+  color: #554D9E;
+  font-size: 40px;
+}
+section p {
+  color: #262626;
+  font-size: 10px;
+}
+section .divider {
+  display: block;
+  margin: auto;
+  padding: 40px;
 }
 
 .btn {

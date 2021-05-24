@@ -33,19 +33,21 @@
           </nav>
         </div>
       </div>
-      <div class="hero" tabindex="-1" @keyup.left="leftClick" @keyup.right= "rightClick(false)">
+      <div class="hero" tabindex="-1" @keyup.left="leftClick" @keyup.right="rightClick(false)">
         <!-- <transition-group name="fade" mode="out-in"> -->
-          <div class="sliderCenter" :key="heroSliderList[defaultVueImg].id" :style="{ backgroundImage: 'url(' + heroSliderList[defaultVueImg].background + ')' }">
-            <div class="imgContainer left">
-              <img :src="heroSliderList[defaultVueImg].leftImg" alt="">
-            </div>
-            <div class="imgContainer right">
-              <img :src="heroSliderList[defaultVueImg].rightImg" alt="">
-            </div>
-            <div class="dotsContainer">
-              <div v-for="(slide, indice) in heroSliderList" @click="dotClick(indice)" :class="{up: indice == defaultVueImg}" class="dot"></div>
-            </div>
+        <div class="sliderCenter" :key="heroSliderList[defaultVueImg].id"
+          :style="{ backgroundImage: 'url(' + heroSliderList[defaultVueImg].background + ')' }">
+          <div class="imgContainer left">
+            <img :src="heroSliderList[defaultVueImg].leftImg" alt="">
           </div>
+          <div class="imgContainer right">
+            <img :src="heroSliderList[defaultVueImg].rightImg" alt="">
+          </div>
+          <div class="dotsContainer">
+            <div v-for="(slide, indice) in heroSliderList" @click="dotClick(indice)"
+              :class="{up: indice == defaultVueImg}" class="dot"></div>
+          </div>
+        </div>
         <!-- </transition-group> -->
       </div>
     </header>
@@ -53,14 +55,20 @@
       <section class="withPattern">
         <div class="container">
           <div class="flex-container">
-            <h1>How to Enroll Your Child to a Class</h1>
+            <h2>How to Enroll Your Child to a Class</h2>
             <div class="btn invisible">LEARN MORE
               <i class="fas fa-chevron-right"></i>
             </div>
           </div>
         </div>
       </section>
-      <section></section>
+      <section>
+        <div class="container">
+            <h1>Welcome to Fable</h1>
+            <p>Fable daycare, preschool and kindergarten</p>
+            <img class="divider" src="public/imgs/header_divider.png" alt="divider">
+        </div>
+      </section>
       <section></section>
       <section></section>
       <section></section>

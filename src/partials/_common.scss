@@ -17,3 +17,21 @@ body{
 .flex-container{
     @include flex_default;
 }
+
+ul{
+    list-style: none;
+}
+
+.logo-container{
+    width: 120px;
+    height: 60px;
+
+    img{
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.whitespace{
+    flex-grow: 1;
+}

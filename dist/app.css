@@ -18,3 +18,25 @@ body {
   display: flex;
   align-items: center;
 }
+
+ul {
+  list-style: none;
+}
+
+.logo-container {
+  width: 120px;
+  height: 60px;
+}
+.logo-container img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.whitespace {
+  flex-grow: 1;
+}
+
+header {
+  padding: 20px 0;
+}

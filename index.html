@@ -107,8 +107,8 @@
       </section>
       <section class="grey">
         <div class="container">
-          <div class="flex-container jc-space-between">
-            <div class="col-6 small">
+          <div class="flex-container">
+            <div class="col-6">
               <div class="btn baloon">Overview</div>
               <div class="btn baloon">Our Mission</div>
               <h2>Our philosophy il learning through play as we offer a stimulating enviroment for chideren</h2>
@@ -136,7 +136,7 @@
               </div>
             </div>
 
-            <div class="col-6 small">
+            <div class="col-6">
               <div class="slider-container" tabindex="-1">
                 <div class="btn orange" @click="leftClick">
                   <img src="../public/imgs/slider_previous.png" alt="previous">
@@ -200,15 +200,15 @@
           </div>
         </div>
       </section>
-      <section>
+      <section class="white">
         <div class="section-header">
           <h1>Our Classes</h1>
           <p>Our preschool program has four dedicated classes</p>
           <img class="divider" src="public/imgs/header_divider.png" alt="divider">
         </div>
         <div class="container">
-          <div class="flex-container jc-space-between">
-            <div class="col-6 small">
+          <div class="flex-container classes">
+            <div class="col-6 flex-container fd-column">
               <h2>We provided four classes with four to twenty childern each aged twelve month to five years of age</h2>
               <div class="flex-container fd-column">
                 <div class="flex-container card">
@@ -274,27 +274,59 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 small">
-              <p id="big-par">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum id, omnis laboriosam eos temporibus
+          </div>
+          <div class="col-6 flex-container fd-column">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum id, omnis laboriosam eos
+                temporibus
                 nisi? Ut, veniam natus! Maiores ad excepturi ipsam quas rerum consectetur vel, corrupti exercitationem
                 iure laborum, qui dicta?</p>
+              <div class="flex-container fd-column">
+                <div class="flex-container card">
+                  <div class="col-6 bg-purple flex-container fd-column card-left">
+                    <h3>Little Lambs</h3>
+                    <p>Class name</p>
+                    <div class="whitespace"></div>
+                    <div class="flex-container">
+                      <div class="col-6 border-right">
+                        <div class="flex-container fd-column ta-center">
+                          <h4>12-24</h4>
+                          <p>Month olds</p>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="flex-container fd-column ta-center">
+                          <h4>9</h4>
+                          <p>Class size</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 card-right flex-container fd-column">
+                    <div class="simple-square grow">
+                      <img src="../public/imgs/class_03-690x506.jpg" alt="class 3">
+                      <div class="btn orange">
+                        READ MORE
+                        <i class="fas fa-chevron-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="flex-container fd-column">
                   <div class="flex-container card">
                     <div class="col-6 bg-purple flex-container fd-column card-left">
-                      <h3>Little Lambs</h3>
+                      <h3>Tenderhearts</h3>
                       <p>Class name</p>
                       <div class="whitespace"></div>
                       <div class="flex-container">
                         <div class="col-6 border-right">
                           <div class="flex-container fd-column ta-center">
-                            <h4>12-24</h4>
+                            <h4>3-4</h4>
                             <p>Month olds</p>
                           </div>
                         </div>
                         <div class="col-6">
                           <div class="flex-container fd-column ta-center">
-                            <h4>9</h4>
+                            <h4>15</h4>
                             <p>Class size</p>
                           </div>
                         </div>
@@ -302,7 +334,7 @@
                     </div>
                     <div class="col-6 card-right flex-container fd-column">
                       <div class="simple-square grow">
-                        <img src="../public/imgs/class_03-690x506.jpg" alt="class 3">
+                        <img src="../public/imgs/class_04-690x506.jpg" alt="class 4">
                         <div class="btn orange">
                           READ MORE
                           <i class="fas fa-chevron-right"></i>
@@ -310,39 +342,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="flex-container fd-column">
-                    <div class="flex-container card">
-                      <div class="col-6 bg-purple flex-container fd-column card-left">
-                        <h3>Tenderhearts</h3>
-                        <p>Class name</p>
-                        <div class="whitespace"></div>
-                        <div class="flex-container">
-                          <div class="col-6 border-right">
-                            <div class="flex-container fd-column ta-center">
-                              <h4>3-4</h4>
-                              <p>Month olds</p>
-                            </div>
-                          </div>
-                          <div class="col-6">
-                            <div class="flex-container fd-column ta-center">
-                              <h4>15</h4>
-                              <p>Class size</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6 card-right flex-container fd-column">
-                        <div class="simple-square grow">
-                          <img src="../public/imgs/class_04-690x506.jpg" alt="class 4">
-                          <div class="btn orange">
-                            READ MORE
-                            <i class="fas fa-chevron-right"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
+              </div>
             </div>
           </div>
       </section>
@@ -350,8 +351,10 @@
         <div class="container">
           <div class="flex-container">
             <div class="col-6">
-              <h2>We have been educating children for over fifteen years. Our goal is to create a place that engages each child.</h2>
-              <p class="spaced-par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorem sequi perspiciatis? Rem labore alias hic harum obcaecati cumque nisi, error nesciunt expedita odit.</p>
+              <h2>We have been educating children for over fifteen years. Our goal is to create a place that engages
+                each child.</h2>
+              <p class="spaced-par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorem sequi
+                perspiciatis? Rem labore alias hic harum obcaecati cumque nisi, error nesciunt expedita odit.</p>
               <div class="flex-container row">
                 <img class="checkbox" src="../public/imgs/style_1.png" alt="checkbox">
                 <p>Comprehensive reporting on individual archievement</p>
@@ -379,39 +382,39 @@
             </div>
             <div class="col-6">
               <div class="flex-container fd-column">
-                <div class="flex-container jc-space-even">
-                  <div class="module flex-container col-6 small fd-column">
+                <div class="flex-container">
+                  <div class="module flex-container col-6 fd-column">
                     <div class="round white">
                       <img src="../public/imgs/toy.png" alt="toy">
                     </div>
                     <h3 class="ta-center">Learning & Fun</h3>
                     <p class="ta-center">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                   </div>
-                  <div class="module flex-container col-6 small fd-column">
+                  <div class="module flex-container col-6 fd-column">
                     <div class="round white">
                       <img src="../public/imgs/meal.png" alt="meal">
                     </div>
                     <h3 class="ta-center">Healthy Meals</h3>
                     <p class="ta-center">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                  </div> 
+                  </div>
                 </div>
               </div>
               <div class="flex-container fd-column">
-                <div class="flex-container jc-space-even">
-                  <div class="module flex-container col-6 small fd-column">
+                <div class="flex-container">
+                  <div class="module flex-container col-6 fd-column">
                     <div class="round white">
                       <img src="../public/imgs/school.png" alt="school">
                     </div>
                     <h3 class="ta-center">Friendly Place</h3>
                     <p class="ta-center">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                   </div>
-                  <div class="module flex-container col-6 small fd-column">
+                  <div class="module flex-container col-6 fd-column">
                     <div class="round white">
                       <img src="../public/imgs/shield.png" alt="shield">
                     </div>
                     <h3 class="ta-center">Children Safety</h3>
                     <p class="ta-center">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                  </div> 
+                  </div>
                 </div>
               </div>
             </div>
@@ -444,7 +447,180 @@
           </div>
         </div>
       </section>
-      <section></section>
+      <section class="white card-section">
+        <div class="section-header">
+          <h1>Meet our Staff</h1>
+          <p>With education and experience in early childhood care</p>
+          <img class="divider" src="public/imgs/header_divider.png" alt="divider">
+        </div>
+        <div class="container">
+          <div class="flex-container">
+            <div class="col-6 lex-container fd-column">
+              <h2>Our staff consist of teachers and one assistant with experience in early childhood care</h2>
+              <div class="flex-container fd-column">
+                <div class="flex-container main-card">
+                  <div class="col-6 main-card-img-container">
+                    <img src="../public/imgs/team_01.jpg" alt="team 1">
+                    <div class="img-overlay round purple transparent">
+                      <img src="public/imgs/image_overlay.png" alt="add">
+                    </div>
+                  </div>
+                  <div class="col-6 main-card-text-conttainer">
+                    <div class="quote-div flex-container">
+                      <div class="whitespace"></div>
+                      <img src="../public/imgs/quote.png" alt="quote">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sequi deserunt quasi possimus
+                      repellat. Deserunt minima fugit delectus, illum optio accusamus omnis, dolore dicta velit deleniti
+                      fuga corrupti cupiditate voluptatibus facilis eos.</p>
+                  </div>
+                </div>
+                <div class="flex-container card-footer">
+                  <div class="col-6">
+                    <h3>Ruth RIchie</h3>
+                    <p>Teacher</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="flex-container">
+                      <div class="btn orange">
+                        <img src="../public/imgs/mail.png" alt="mail">
+                      </div>
+                      <div class="btn orange">
+                        <img src="../public/imgs/facebook.png" alt="facebook">
+                      </div>
+                      <div class="btn orange">
+                        <img src="../public/imgs/pinterest.png" alt="pinterest">
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-container fd-column">
+                <div class="flex-container main-card">
+                  <div class="col-6 main-card-img-container">
+                    <img src="../public/imgs/team_02.jpg" alt="team 2">
+                    <div class="img-overlay round purple transparent">
+                      <img src="public/imgs/image_overlay.png" alt="add">
+                    </div>
+                  </div>
+                  <div class="col-6 main-card-text-conttainer">
+                    <div class="quote-div flex-container">
+                      <div class="whitespace"></div>
+                      <img src="../public/imgs/quote.png" alt="quote">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sequi deserunt quasi possimus
+                      repellat. Deserunt minima fugit delectus, illum optio accusamus omnis, dolore dicta velit deleniti
+                      fuga corrupti cupiditate voluptatibus facilis eos.</p>
+                  </div>
+                </div>
+                <div class="flex-container card-footer">
+                  <div class="col-6">
+                    <h3>Angelica Watson</h3>
+                    <p>Lead Teacher</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="flex-container">
+                      <div class="btn orange">
+                        <img src="../public/imgs/bing.png" alt="bing">
+                      </div>
+                      <div class="btn orange">
+                        <img src="../public/imgs/skype.png" alt="skype">
+                      </div>
+                      <div class="btn orange">
+                        <img src="../public/imgs/linkedin.png" alt="linkedin">
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 flex-container fd-column">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam distinctio repellat necessitatibus et quia voluptatem saepe sint voluptates earum reprehenderit, velit accusamus similique repudiandae iure ratione neque veniam optio rerum quod modi?</p>
+              <div class="flex-container fd-column">
+                <div class="flex-container main-card">
+                  <div class="col-6 main-card-img-container">
+                    <img src="../public/imgs/team_03.jpg" alt="team 3">
+                    <div class="img-overlay round purple transparent">
+                      <img src="public/imgs/image_overlay.png" alt="add">
+                    </div>
+                  </div>
+                  <div class="col-6 main-card-text-conttainer">
+                    <div class="quote-div flex-container">
+                      <div class="whitespace"></div>
+                      <img src="../public/imgs/quote.png" alt="quote">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sequi deserunt quasi possimus
+                      repellat. Deserunt minima fugit delectus, illum optio accusamus omnis, dolore dicta velit deleniti
+                      fuga corrupti cupiditate voluptatibus facilis eos.</p>
+                  </div>
+                </div>
+                <div class="flex-container card-footer">
+                  <div class="col-6">
+                    <h3>Kathie Willmore</h3>
+                    <p>Assistant Teacher</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="flex-container">
+                      <div class="btn orange">
+                        <img src="../public/imgs/dribbble.png" alt="dribbble">
+                      </div>
+                      <div class="btn orange">
+                        <img src="../public/imgs/facebook.png" alt="facebook">
+                      </div>
+                      <div class="btn orange">
+                        <img src="../public/imgs/stumbleupon.png" alt="stumbleupon">
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-container fd-column">
+                <div class="flex-container main-card">
+                  <div class="col-6 main-card-img-container">
+                    <img src="../public/imgs/team_04.jpg" alt="team 4">
+                    <div class="img-overlay round purple transparent">
+                      <img src="public/imgs/image_overlay.png" alt="add">
+                    </div>
+                  </div>
+                  <div class="col-6 main-card-text-conttainer">
+                    <div class="quote-div flex-container">
+                      <div class="whitespace"></div>
+                      <img src="../public/imgs/quote.png" alt="quote">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sequi deserunt quasi possimus
+                      repellat. Deserunt minima fugit delectus, illum optio accusamus omnis, dolore dicta velit deleniti
+                      fuga corrupti cupiditate voluptatibus facilis eos.</p>
+                  </div>
+                </div>
+                <div class="flex-container card-footer">
+                  <div class="col-6">
+                    <h3>Angela Lynn</h3>
+                    <p>Lead Teacher</p>
+                  </div>
+                  <div class="col-6">
+                    <div class="flex-container">
+                      <div class="btn orange">
+                        <img src="../public/imgs/youtube.png" alt="youtube">
+                      </div>
+                      <div class="btn orange">
+                        <img src="../public/imgs/twitter.png" alt="twitter">
+                      </div>
+                      <div class="btn orange">
+                        <img src="../public/imgs/googleplus.png" alt="googleplus">
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
       <section></section>
       <section></section>
       <section></section>

@@ -22,6 +22,10 @@
 
     &.purple{
         background-color: $Color_Cube_butterfly-bush;
+
+        &.transparent{
+            opacity: .6;
+        }
     }
     img{
         width: 60px;

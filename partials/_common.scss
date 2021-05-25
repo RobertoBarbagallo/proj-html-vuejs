@@ -1,43 +1,43 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Noto Sans SC', sans-serif;
+body {
+    font-family: "Noto Sans SC", sans-serif;
 }
 
-.container{
+.container {
     max-width: 920px;
     width: 100%;
-    margin: auto
+    margin: auto;
 }
 
-.flex-container{
+.flex-container {
     @include flex_default;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-.logo-container{
+.logo-container {
     width: 160px;
     height: 80px;
 
-    img{
+    img {
         width: 100%;
         object-fit: contain;
     }
 }
 
-.whitespace{
+.whitespace {
     flex-grow: 1;
     height: 100%;
 }
 
-.dotsContainer{
+.dotsContainer {
     position: absolute;
     padding: 20px 30px;
     left: 50%;
@@ -50,28 +50,35 @@ ul{
     border-radius: 8px;
 }
 
-.dot{
+.dot {
     margin: 0 10px;
     height: 10px;
     width: 30px;
     border: 1px solid $Color_Cube_blaze-orange;
 
-    &.up{
+    &.up {
         margin-bottom: 10px;
     }
 }
 
-
-.col-3{
-    width:  calc(100% / 4) ;
+.col-3 {
+    width: calc(100% / 4);
     padding: $base_Spacing 0;
 }
 
-.col-6{
-    width:  calc(100% / 2) ; 
+.col-6 {
+    width: calc(100% / 2);
     padding: $base_Spacing 0;
 }
 
-.grow{
+.grow {
     flex-grow: 1;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
 }

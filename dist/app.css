@@ -75,6 +75,14 @@ ul {
   flex-grow: 1;
 }
 
+.img-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
 .img-slider {
   overflow: hidden;
   position: relative;
@@ -272,16 +280,36 @@ section .col-6 .slider-container .btn.right {
 section .col-6 .slider-container .img-slider {
   height: 300px;
 }
+section .col-6 .slider-container .img-slider .square-big-slider:hover .img-overlay {
+  visibility: visible;
+}
+section .col-6 .slider-container .img-slider .square-big-slider:hover .img-overlay img {
+  width: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 section .col-6 .slider-container .flex-container {
   justify-content: space-between;
   padding: 0;
   padding-top: 15px;
+}
+section .col-6 .slider-container .flex-container .square-small-slider {
+  position: relative;
 }
 section .col-6 .slider-container .flex-container .square-small-slider img {
   padding-bottom: 10px;
 }
 section .col-6 .slider-container .flex-container .square-small-slider.underline {
   border-bottom: 1px solid #FE6602;
+}
+section .col-6 .slider-container .flex-container .square-small-slider:hover .img-overlay {
+  visibility: visible;
+}
+section .col-6 .slider-container .flex-container .square-small-slider:hover .img-overlay img {
+  width: 15px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 0;
 }
 
 .btn {
@@ -359,6 +387,9 @@ section .col-6 .slider-container .flex-container .square-small-slider.underline 
 }
 .round.purple {
   background-color: #554D9E;
+}
+.round.purple.transparent {
+  opacity: 0.6;
 }
 .round img {
   width: 60px;

@@ -143,12 +143,18 @@
                 <transition-group class="img-slider" tag="div" :name="anotherBack ? 'slideback' : 'slide'">
                   <div :key="sectionSliderList[anotherVueImg].id" class="square-big-slider">
                     <img :src="sectionSliderList[anotherVueImg].imgPath" alt="img">
+                    <div class="img-overlay round purple transparent">
+                      <img src="public/imgs/image_overlay.png" alt="add">
+                    </div>
                   </div>
                 </transition-group>
                 <div class="flex-container">
                   <div @click="divClick(index)" v-for="(pics, index) in lastImg"
                     :class="{underline: index == anotherVueImg}" class="square-small-slider">
                     <img :src="sectionSliderList[index].imgPath" alt="small img">
+                    <div class="img-overlay small round purple transparent">
+                      <img src="public/imgs/image_overlay.png" alt="add">
+                    </div>
                   </div>
                 </div>
               </div>

@@ -77,7 +77,8 @@ new Vue({
 
     defaultVueImg: 2,
     counter: 0,
-    interval: null
+    interval: null,
+    back: false,
   },
 
   computed: {
@@ -87,6 +88,7 @@ new Vue({
   methods: {
 
     rightClick(param) {
+      this.back = false
       if(param == false){
         clearInterval(this.interval)
         let newIndex = this.defaultVueImg + 1;
@@ -109,6 +111,7 @@ new Vue({
     },
 
     leftClick() {
+      this.back = true
       clearInterval(this.interval)
       let newIndex = this.defaultVueImg - 1;
       let limite = 0;

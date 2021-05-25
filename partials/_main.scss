@@ -161,29 +161,6 @@ section {
         }
     }
 
-    &.stats {
-        background: url(../public/imgs/parallax_01.jpg);
-        background-size: cover;
-        background-position-y: 25%;
-        height: 500px;
-        position: relative;
-     
-        h3,
-        p {
-            color: $Color_Cube_sugar_cane;
-        }
-
-        h3 {
-            font-weight: 400;
-        }
-        p {
-            font-size: (($min_font_size/2) * 3);
-        }
-        .dot {
-            border-color: $Color_Cube_sugar_cane;
-        }
-    }
-
     #big-par {
         height: 108px;
         font-size: $min_font_size*1.5;
@@ -211,7 +188,7 @@ section {
 
     &.white{
         h2, p{
-            &:not(.section-header h2, .section-header p){
+            &:not(.section-header h2, .section-header p, .main-card-text-conttainer p){
                 height: 120px;
             }
         }
@@ -226,7 +203,7 @@ section {
 
        .main-card-text-conttainer{
            position: relative;
-           p{  height: auto;
+           p{  
                padding-top: $base_Spacing*3;
            }
            .quote-div{
@@ -268,5 +245,43 @@ section {
            }
 
        }
+    }
+    &.parallax{
+        height: 500px;
+        position: relative;
+        h3,
+        p, h2 {
+            color: $Color_Cube_sugar_cane;
+        }
+
+        h3 {
+            font-weight: 400;
+        }
+        p {
+            font-size: (($min_font_size/2) * 3);
+        }
+        .dot {
+            border-color: $Color_Cube_sugar_cane;
+        }
+        &.stats {
+            background: url(../public/imgs/parallax_01.jpg);
+            background-position-y: 25%; 
+            background-size: cover;
+             
+        }
+        &.kindergarten {
+            background: url(../public/imgs/parallax_02.jpg);
+            background-position-y: 45%;
+            background-size: cover;
+
+            h2{
+                padding: $base_Spacing*2;
+                font-size: $min_font_size*3;
+            }
+            p{
+                padding: $base_Spacing;
+                font-weight: 400;
+            }
+        }    
     }
 }

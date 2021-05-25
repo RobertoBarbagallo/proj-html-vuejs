@@ -57,7 +57,7 @@ ul {
     border: 1px solid $Color_Cube_blaze-orange;
 
     &.up {
-        margin-bottom: 10px;
+        margin-bottom: 30px;
     }
 }
 
@@ -110,7 +110,7 @@ ul {
 .card{
     height: 180px;
     margin: $base_Spacing/2 0;
-    align-items: center;
+    // align-items: center;
     h4{
         color: $Color_Cube_sugar_cane;
     }
@@ -134,19 +134,12 @@ ul {
     margin: $base_Spacing/2;
 }
 
-.ai-baseline{
-    align-items: baseline;
+.as-hr{
+    width: 5%;
+    margin: auto;
+    border-top: 1px solid $Color_Cube_sugar_cane;
 }
 
-// .jc-space-between{
-//     justify-content: space-between;
-// }
 
-// .jc-space-even{
-//     justify-content: space-evenly;
-//     width: 100%;
-// }
 
-.pd-0{
-    padding: 0;
-}
+

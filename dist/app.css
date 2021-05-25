@@ -58,7 +58,7 @@ ul {
   border: 1px solid #FE6602;
 }
 .dot.up {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .col-3 {
@@ -110,7 +110,6 @@ ul {
 .card {
   height: 180px;
   margin: 10px 0;
-  align-items: center;
 }
 .card h4 {
   color: #FEFFFE;
@@ -133,12 +132,10 @@ ul {
   margin: 10px;
 }
 
-.ai-baseline {
-  align-items: baseline;
-}
-
-.pd-0 {
-  padding: 0;
+.as-hr {
+  width: 5%;
+  margin: auto;
+  border-top: 1px solid #FEFFFE;
 }
 
 .img-slider {
@@ -377,26 +374,6 @@ section.grey .col-6 .slider-container .flex-container .square-small-slider:hover
      object-fit: contain;
   padding: 0;
 }
-section.stats {
-  background: url(/images/parallax_01.jpg?0f701719699db9e48410f4c16175af51);
-  background-size: cover;
-  background-position-y: 25%;
-  height: 500px;
-  position: relative;
-}
-section.stats h3,
-section.stats p {
-  color: #FEFFFE;
-}
-section.stats h3 {
-  font-weight: 400;
-}
-section.stats p {
-  font-size: 15px;
-}
-section.stats .dot {
-  border-color: #FEFFFE;
-}
 section #big-par {
   height: 108px;
   font-size: 15px;
@@ -415,7 +392,7 @@ section .classes > .col-6 {
 section.gallery {
   padding: 0;
 }
-section.white h2:not(.section-header h2, .section-header p), section.white p:not(.section-header h2, .section-header p) {
+section.white h2:not(.section-header h2, .section-header p, .main-card-text-conttainer p), section.white p:not(.section-header h2, .section-header p, .main-card-text-conttainer p) {
   height: 120px;
 }
 section.card-section .col-6 {
@@ -428,7 +405,6 @@ section.card-section .main-card-text-conttainer {
   position: relative;
 }
 section.card-section .main-card-text-conttainer p {
-  height: auto;
   padding-top: 60px;
 }
 section.card-section .main-card-text-conttainer .quote-div {
@@ -465,6 +441,41 @@ section.card-section .card-footer .btn img {
 }
 section.card-section .card-footer .btn:hover img {
   filter: invert(48%) sepia(22%) saturate(4141%) hue-rotate(355deg) brightness(95%) contrast(114%);
+}
+section.parallax {
+  height: 500px;
+  position: relative;
+}
+section.parallax h3,
+section.parallax p, section.parallax h2 {
+  color: #FEFFFE;
+}
+section.parallax h3 {
+  font-weight: 400;
+}
+section.parallax p {
+  font-size: 15px;
+}
+section.parallax .dot {
+  border-color: #FEFFFE;
+}
+section.parallax.stats {
+  background: url(/images/parallax_01.jpg?0f701719699db9e48410f4c16175af51);
+  background-position-y: 25%;
+  background-size: cover;
+}
+section.parallax.kindergarten {
+  background: url(/images/parallax_02.jpg?b226b3f83f260f09e4e6239f000ccf0a);
+  background-position-y: 45%;
+  background-size: cover;
+}
+section.parallax.kindergarten h2 {
+  padding: 40px;
+  font-size: 30px;
+}
+section.parallax.kindergarten p {
+  padding: 20px;
+  font-weight: 400;
 }
 
 .btn {

@@ -73,9 +73,7 @@ ul {
 .col-6 {
   width: calc(100% / 2);
   padding: 20px 0;
-}
-.col-6.small {
-  width: calc(100% / 2.1);
+  margin: auto;
 }
 
 .grow {
@@ -137,15 +135,6 @@ ul {
 
 .ai-baseline {
   align-items: baseline;
-}
-
-.jc-space-between {
-  justify-content: space-between;
-}
-
-.jc-space-even {
-  justify-content: space-evenly;
-  width: 100%;
 }
 
 .pd-0 {
@@ -321,6 +310,9 @@ section.grey .row {
 section.grey .flex-container:nth-child(1) {
   align-items: end;
 }
+section.grey .col-6 {
+  margin: auto;
+}
 section.grey .col-6 h2 {
   padding: 20px 0;
 }
@@ -409,13 +401,70 @@ section #big-par {
   height: 108px;
   font-size: 15px;
 }
+section .module {
+  margin: auto;
+}
 section .module h3 {
   padding: 6.6666666667px 0;
   width: 100%;
   font-weight: 400;
 }
+section .classes > .col-6 {
+  margin: 0 10px;
+}
 section.gallery {
   padding: 0;
+}
+section.white h2:not(.section-header h2, .section-header p), section.white p:not(.section-header h2, .section-header p) {
+  height: 120px;
+}
+section.card-section .col-6 {
+  margin: auto;
+}
+section.card-section h2 {
+  text-align: left;
+}
+section.card-section .main-card-text-conttainer {
+  position: relative;
+}
+section.card-section .main-card-text-conttainer p {
+  height: auto;
+  padding-top: 60px;
+}
+section.card-section .main-card-text-conttainer .quote-div {
+  width: 120px;
+  height: 30px;
+  position: absolute;
+  top: 15%;
+  left: -25%;
+  border: 1px solid #FE6602;
+}
+section.card-section .main-card-text-conttainer .quote-div img {
+  padding: 10px 20px;
+  width: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+section.card-section .card-footer .col-6 {
+  padding: 0;
+}
+section.card-section .card-footer h3, section.card-section .card-footer p {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  height: auto;
+}
+section.card-section .card-footer .btn {
+  padding: 5px;
+  margin: 0 5px;
+}
+section.card-section .card-footer .btn img {
+  width: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+section.card-section .card-footer .btn:hover img {
+  filter: invert(48%) sepia(22%) saturate(4141%) hue-rotate(355deg) brightness(95%) contrast(114%);
 }
 
 .btn {
@@ -548,4 +597,25 @@ section.gallery {
 
 .checkbox {
   padding-right: 10px;
+}
+
+.main-card-img-container {
+  width: 200px;
+  height: 250px;
+  position: relative;
+  margin: auto;
+}
+.main-card-img-container img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.main-card-img-container:hover .img-overlay {
+  visibility: visible;
+}
+.main-card-img-container:hover .img-overlay img {
+  width: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 0;
 }

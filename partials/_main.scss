@@ -45,7 +45,6 @@ section {
         color: $Color_Cube_mine-shaft;
         font-size: $min_font_size*1.5;
     }
-
     .divider {
         display: block;
         margin: auto;
@@ -79,6 +78,7 @@ section {
         }
 
         .col-6 {
+            margin: auto;
             h2 {
                 padding: $base_Spacing 0;
             }
@@ -167,7 +167,7 @@ section {
         background-position-y: 25%;
         height: 500px;
         position: relative;
-
+     
         h3,
         p {
             color: $Color_Cube_sugar_cane;
@@ -190,6 +190,7 @@ section {
     }
 
     .module{
+        margin: auto;
         h3{
             padding: $base_Spacing/3 0;
             width: 100%;
@@ -197,7 +198,75 @@ section {
         }
     }
 
+    .classes{
+
+        >.col-6{
+            margin: 0 $base_Spacing/2;
+        }
+    }
+
     &.gallery{
         padding: 0;
+    }
+
+    &.white{
+        h2, p{
+            &:not(.section-header h2, .section-header p){
+                height: 120px;
+            }
+        }
+    }
+    &.card-section{
+        .col-6{
+            margin: auto;
+        }
+        h2{
+            text-align: left;
+        }
+
+       .main-card-text-conttainer{
+           position: relative;
+           p{  height: auto;
+               padding-top: $base_Spacing*3;
+           }
+           .quote-div{
+               width: 120px;
+               height: 30px;
+               position: absolute;
+               top: 15%;
+               left: -25%;
+               border: 1px solid $Color_Cube_blaze-orange;
+               img{
+                   padding: $base_Spacing/2 $base_Spacing;
+                   width: 60px;
+                   object-fit: contain;
+               }
+           }
+       }
+       .card-footer{
+           .col-6{
+               padding: 0;
+           }
+           h3, p{
+               padding: 0;
+               width: 100%;
+               text-align: center;
+               height: auto;
+           }
+           .btn{
+            padding: $base_Spacing/ 4;
+            margin: 0 $base_Spacing/ 4;
+            img{
+                width: 30px;
+                object-fit: contain;
+            }
+            &:hover{
+                & img{
+                    filter: invert(48%) sepia(22%) saturate(4141%) hue-rotate(355deg) brightness(95%) contrast(114%)
+                }
+            }
+           }
+
+       }
     }
 }

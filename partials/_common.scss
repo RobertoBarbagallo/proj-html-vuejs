@@ -72,9 +72,7 @@ ul {
 .col-6 {
     width: calc(100% / 2);
     padding: $base_Spacing 0;
-    &.small{
-        width: calc(100% / 2.1);
-    }
+    margin: auto;
 }
 
 .grow {
@@ -140,14 +138,14 @@ ul {
     align-items: baseline;
 }
 
-.jc-space-between{
-    justify-content: space-between;
-}
+// .jc-space-between{
+//     justify-content: space-between;
+// }
 
-.jc-space-even{
-    justify-content: space-evenly;
-    width: 100%;
-}
+// .jc-space-even{
+//     justify-content: space-evenly;
+//     width: 100%;
+// }
 
 .pd-0{
     padding: 0;

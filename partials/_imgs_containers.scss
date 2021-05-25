@@ -80,3 +80,26 @@
 .checkbox{
     padding-right: $base_Spacing/2;
 }
+
+.main-card-img-container{
+    width: 200px;
+    height: 250px;
+    position: relative;
+    margin: auto;
+    img{
+        width: 100%;
+        object-fit: contain;
+    }
+
+    &:hover{
+
+        & .img-overlay{
+            visibility: visible;
+            img {
+                width: 30px;
+                object-fit: contain;
+                padding: 0;
+            }
+        }
+    }
+}

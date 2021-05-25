@@ -20,6 +20,14 @@
         background-color: $Color_Cube_blaze-orange;
     }
 
+    &.transparent{
+        background-color: transparent;
+        color: $Color_Cube_sugar_cane;
+        border: 1px solid $Color_Cube_sugar_cane;
+        font-weight: 100;
+        font-size: $min_font_size*4;
+    }
+
     &.purple{
         background-color: $Color_Cube_butterfly-bush;
 
@@ -50,4 +58,11 @@
         object-fit: contain;
     }
   
+}
+
+.simple-square{
+    img{
+        width: 100%;
+        height: 100%;
+    }
 }

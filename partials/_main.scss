@@ -37,6 +37,7 @@ section {
     h3 {
         padding: $base_Spacing * 2 0;
         color: $Color_Cube_butterfly-bush;
+        font-weight: 100;
     }
 
     p {
@@ -67,88 +68,116 @@ section {
         .flex-container:nth-child(1) {
             align-items: end;
         }
+
+        .col-6 {
+            h2 {
+                padding: $base_Spacing 0;
+            }
+
+            h3 {
+                padding: $base_Spacing/ 2 $base_Spacing;
+            }
+
+            p {
+                font-size: $min_font_size;
+                padding: 0 $base_Spacing;
+            }
+
+            .flex-container {
+                padding: $base_Spacing/2;
+            }
+
+            .slider-container {
+                padding: $base_Spacing;
+                position: relative;
+                &:focus,
+                &:active {
+                    outline: none;
+                }
+                .btn {
+                    position: absolute;
+                    top: 120px;
+                    z-index: 10;
+
+                    img {
+                        width: 25px;
+                        object-fit: contain;
+                    }
+
+                    &.right {
+                        right: $base_Spacing;
+                    }
+                }
+                .img-slider {
+                    height: 300px;
+                    .square-big-slider {
+                        &:hover {
+                            & .img-overlay {
+                                visibility: visible;
+                                img {
+                                    width: 30px;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                    }
+                }
+                .flex-container {
+                    justify-content: space-between;
+                    padding: 0;
+                    padding-top: ($base_Spacing/2) * 1.5;
+
+                    .square-small-slider {
+                        position: relative;
+                        img {
+                            padding-bottom: $base_Spacing / 2;
+                        }
+
+                        &.underline {
+                            border-bottom: 1px solid $Color_Cube_blaze-orange;
+                        }
+
+                        &:hover {
+                            & .img-overlay {
+                                visibility: visible;
+                                img {
+                                    width: 15px;
+                                    object-fit: contain;
+                                    padding: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
-    .col-6 {
-        h2 {
-            padding: $base_Spacing 0;
+    &.stats {
+        background: url(../public/imgs/parallax_01.jpg);
+        background-size: cover;
+        background-position-y: 25%;
+        height: 500px;
+        position: relative;
+
+        h3,
+        p {
+            color: $Color_Cube_sugar_cane;
         }
 
         h3 {
-            padding: $base_Spacing/ 2 $base_Spacing;
+            font-weight: 400;
         }
-
         p {
-            font-size: $min_font_size;
-            padding: 0 $base_Spacing;
+            font-size: (($min_font_size/2) * 3);
         }
-
-        .flex-container {
-            padding: $base_Spacing;
+        .dot {
+            border-color: $Color_Cube_sugar_cane;
         }
+    }
 
-        .slider-container {
-            padding: $base_Spacing;
-            position: relative;
-            &:focus,
-            &:active {
-                outline: none;
-            }
-            .btn {
-                position: absolute;
-                top: 120px;
-                z-index: 10;
-
-                img {
-                    width: 25px;
-                    object-fit: contain;
-                }
-
-                &.right {
-                    right: $base_Spacing;
-                }
-            }
-            .img-slider {
-                height: 300px;
-                .square-big-slider {
-                    &:hover {
-                        & .img-overlay {
-                            visibility: visible;
-                            img {
-                                width: 30px;
-                                object-fit: contain;
-                            }
-                        }
-                    }
-                }
-            }
-            .flex-container {
-                justify-content: space-between;
-                padding: 0;
-                padding-top: ($base_Spacing/2) * 1.5;
-
-                .square-small-slider {
-                    position: relative;
-                    img {
-                        padding-bottom: $base_Spacing / 2;
-                    }
-
-                    &.underline {
-                        border-bottom: 1px solid $Color_Cube_blaze-orange;
-                    }
-
-                    &:hover {
-                        & .img-overlay {
-                            visibility: visible;
-                            img {
-                                width: 15px;
-                                object-fit: contain;
-                                padding: 0;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+    #big-par {
+        height: 108px;
+        font-size: $min_font_size*1.5;
     }
 }

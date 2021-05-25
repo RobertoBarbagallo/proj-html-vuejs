@@ -114,24 +114,18 @@ new Vue({
 
     rightArrow(param) {
       this.back = false;
-      if (param == false) {
+      if (!param) {
         clearInterval(this.interval);
-        let newIndex = this.defaultVueImg + 1;
-        let limite = (this.heroSliderList.length - 1);
-
-        if (newIndex > limite) {
-          newIndex = 0;
-        }
-        this.defaultVueImg = newIndex;
-      } else {
-        let newIndex = this.defaultVueImg + 1;
-        let limite = (this.heroSliderList.length - 1);
-
-        if (newIndex > limite) {
-          newIndex = 0;
-        }
-        this.defaultVueImg = newIndex;
       }
+    
+      let newIndex = this.defaultVueImg + 1;
+      let limite = (this.heroSliderList.length - 1);
+
+      if (newIndex > limite) {
+        newIndex = 0;
+      }
+      this.defaultVueImg = newIndex;
+      
 
     },
 
@@ -168,25 +162,17 @@ new Vue({
     rightClick(param) {
 
       this.anotherBack = false;
-      if (param == false) {
-        clearInterval(this.anotherInterval);
-        let newIndex = this.anotherVueImg + 1;
-        let limite = (this.sectionSliderList.length - 1);
-
-        if (newIndex > limite) {
-          newIndex = 0;
-        }
-        this.anotherVueImg = newIndex;
-      } else {
-        let newIndex = this.anotherVueImg + 1;
-        let limite = (this.sectionSliderList.length - 1);
-
-        if (newIndex > limite) {
-          newIndex = 0;
-        }
-
-        this.anotherVueImg = newIndex;
+      if (!param) {
+        clearInterval(this.anotherInterval)
       }
+      let newIndex = this.anotherVueImg + 1;
+      let limite = (this.sectionSliderList.length - 1);
+
+      if (newIndex > limite) {
+          newIndex = 0;
+      }
+      this.anotherVueImg = newIndex;
+     
     },
 
     divClick(index) {

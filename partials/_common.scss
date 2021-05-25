@@ -63,7 +63,10 @@ ul {
 
 .col-3 {
     width: calc(100% / 4);
-    padding: $base_Spacing 0;
+    img{
+        width: 100%;
+        object-fit: contain;
+    }
 }
 
 .col-6 {
@@ -139,4 +142,13 @@ ul {
 
 .jc-space-between{
     justify-content: space-between;
+}
+
+.jc-space-even{
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.pd-0{
+    padding: 0;
 }

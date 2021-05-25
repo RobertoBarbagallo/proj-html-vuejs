@@ -63,16 +63,28 @@ ul {
 
 .col-3 {
   width: calc(100% / 4);
-  padding: 20px 0;
+}
+.col-3 img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .col-6 {
   width: calc(100% / 2);
   padding: 20px 0;
 }
+.col-6.small {
+  width: calc(100% / 2.1);
+}
 
 .grow {
   flex-grow: 1;
+}
+
+.fd-column {
+  flex-direction: column;
+  align-items: normal;
 }
 
 .img-overlay {
@@ -81,6 +93,63 @@ ul {
   left: 50%;
   transform: translate(-50%, -50%);
   visibility: hidden;
+}
+
+.bg-purple {
+  background-color: #554D9E;
+  padding: 10px;
+}
+.bg-purple h3, .bg-purple p {
+  color: #FEFFFE;
+}
+.bg-purple h3 {
+  padding: 6.6666666667px 0;
+}
+.bg-purple p {
+  padding: 0 6.6666666667px;
+}
+
+.card {
+  height: 180px;
+  margin: 10px 0;
+  align-items: center;
+}
+.card h4 {
+  color: #FEFFFE;
+}
+.card .card-left, .card .card-right {
+  height: 100%;
+  padding: 0;
+}
+.card .card-left {
+  padding: 10px;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.border-right {
+  border-right: 1px solid #FEFFFE;
+  padding: 0;
+  margin: 10px;
+}
+
+.ai-baseline {
+  align-items: baseline;
+}
+
+.jc-space-between {
+  justify-content: space-between;
+}
+
+.jc-space-even {
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.pd-0 {
+  padding: 0;
 }
 
 .img-slider {
@@ -193,6 +262,7 @@ section {
 section.withPattern {
   background: url(/images/pattern.png?c31af566a88c6ef9c64468b652153e7b);
   background-repeat: repeat-x;
+  padding: 20px 0;
 }
 section.withPattern .flex-container {
   align-items: center;
@@ -221,10 +291,11 @@ section h2 {
 section h3 {
   padding: 40px 0;
   color: #554D9E;
+  font-weight: 100;
 }
 section p {
   color: #262626;
-  font-size: 10px;
+  font-size: 15px;
 }
 section .divider {
   display: block;
@@ -241,74 +312,109 @@ section .col-3 p {
 section.grey {
   background-color: #E8E6E7;
 }
+section.grey .spaced-par {
+  padding: 10px 0;
+}
+section.grey .row {
+  padding: 10px 0;
+}
 section.grey .flex-container:nth-child(1) {
   align-items: end;
 }
-section .col-6 h2 {
+section.grey .col-6 h2 {
   padding: 20px 0;
 }
-section .col-6 h3 {
+section.grey .col-6 .text h3 {
   padding: 10px 20px;
 }
-section .col-6 p {
+section.grey .col-6 .text p {
   font-size: 10px;
   padding: 0 20px;
 }
-section .col-6 .flex-container {
-  padding: 20px;
-}
-section .col-6 .slider-container {
+section.grey .col-6 .slider-container {
   padding: 20px;
   position: relative;
 }
-section .col-6 .slider-container:focus, section .col-6 .slider-container:active {
+section.grey .col-6 .slider-container:focus, section.grey .col-6 .slider-container:active {
   outline: none;
 }
-section .col-6 .slider-container .btn {
+section.grey .col-6 .slider-container .btn {
   position: absolute;
   top: 120px;
   z-index: 10;
 }
-section .col-6 .slider-container .btn img {
+section.grey .col-6 .slider-container .btn img {
   width: 25px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-section .col-6 .slider-container .btn.right {
+section.grey .col-6 .slider-container .btn.right {
   right: 20px;
 }
-section .col-6 .slider-container .img-slider {
+section.grey .col-6 .slider-container .img-slider {
   height: 300px;
 }
-section .col-6 .slider-container .img-slider .square-big-slider:hover .img-overlay {
+section.grey .col-6 .slider-container .img-slider .square-big-slider:hover .img-overlay {
   visibility: visible;
 }
-section .col-6 .slider-container .img-slider .square-big-slider:hover .img-overlay img {
+section.grey .col-6 .slider-container .img-slider .square-big-slider:hover .img-overlay img {
   width: 30px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-section .col-6 .slider-container .flex-container {
+section.grey .col-6 .slider-container .flex-container {
   justify-content: space-between;
   padding: 0;
   padding-top: 15px;
 }
-section .col-6 .slider-container .flex-container .square-small-slider {
+section.grey .col-6 .slider-container .flex-container .square-small-slider {
   position: relative;
 }
-section .col-6 .slider-container .flex-container .square-small-slider img {
+section.grey .col-6 .slider-container .flex-container .square-small-slider img {
   padding-bottom: 10px;
 }
-section .col-6 .slider-container .flex-container .square-small-slider.underline {
+section.grey .col-6 .slider-container .flex-container .square-small-slider.underline {
   border-bottom: 1px solid #FE6602;
 }
-section .col-6 .slider-container .flex-container .square-small-slider:hover .img-overlay {
+section.grey .col-6 .slider-container .flex-container .square-small-slider:hover .img-overlay {
   visibility: visible;
 }
-section .col-6 .slider-container .flex-container .square-small-slider:hover .img-overlay img {
+section.grey .col-6 .slider-container .flex-container .square-small-slider:hover .img-overlay img {
   width: 15px;
   -o-object-fit: contain;
      object-fit: contain;
+  padding: 0;
+}
+section.stats {
+  background: url(/images/parallax_01.jpg?0f701719699db9e48410f4c16175af51);
+  background-size: cover;
+  background-position-y: 25%;
+  height: 500px;
+  position: relative;
+}
+section.stats h3,
+section.stats p {
+  color: #FEFFFE;
+}
+section.stats h3 {
+  font-weight: 400;
+}
+section.stats p {
+  font-size: 15px;
+}
+section.stats .dot {
+  border-color: #FEFFFE;
+}
+section #big-par {
+  height: 108px;
+  font-size: 15px;
+}
+section .module h3 {
+  padding: 6.6666666667px 0;
+  width: 100%;
+  font-weight: 400;
+}
+section.gallery {
   padding: 0;
 }
 
@@ -385,6 +491,13 @@ section .col-6 .slider-container .flex-container .square-small-slider:hover .img
 .round.orange {
   background-color: #FE6602;
 }
+.round.transparent {
+  background-color: transparent;
+  color: #FEFFFE;
+  border: 1px solid #FEFFFE;
+  font-weight: 100;
+  font-size: 40px;
+}
 .round.purple {
   background-color: #554D9E;
 }
@@ -395,6 +508,9 @@ section .col-6 .slider-container .flex-container .square-small-slider:hover .img
   width: 60px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.round.white {
+  background-color: #FEFFFE;
 }
 
 .square-big-slider {
@@ -415,4 +531,21 @@ section .col-6 .slider-container .flex-container .square-small-slider:hover .img
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.simple-square {
+  position: relative;
+}
+.simple-square img {
+  width: 100%;
+  height: 100%;
+}
+.simple-square .btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.checkbox {
+  padding-right: 10px;
 }

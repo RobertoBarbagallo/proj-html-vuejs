@@ -1,6 +1,7 @@
 section {
     padding: $base_Spacing * 2 0;
 
+
     &.withPattern {
         background: url(../public/imgs/pattern.png);
         background-repeat: repeat-x;
@@ -10,18 +11,17 @@ section {
 
             h2 {
                 color: $Color_Cube_sugar_cane;
-                font-weight: 100;
                 font-size: $min_font_size * 3;
                 flex-grow: 1;
             }
         }
     }
-
-    h1,
-    p{
-        font-weight: 100;
+    .section-header{
         text-align: center;
-        
+    }
+    h1,
+    p {
+        font-weight: 100;
     }
 
     h1 {
@@ -29,30 +29,109 @@ section {
         font-size: $min_font_size * 4;
     }
 
+    h2 {
+        color: $Color_Cube_butterfly-bush;
+        font-weight: 100;
+        font-size: $min_font_size * 2.5;
+    }
+
+    h3 {
+        padding: $base_Spacing * 2 0;
+        color: $Color_Cube_butterfly-bush;
+    }
+
+
     p {
         color: $Color_Cube_mine-shaft;
         font-size: $min_font_size;
     }
 
-    .divider{
+    .divider {
         display: block;
         margin: auto;
-        padding: $base_Spacing *2;
+        padding: $base_Spacing * 2;
     }
 
-    .col-3{
-        h3{
-            padding: $base_Spacing*2 0;
+    .col-3 {
+        h3 {
             text-align: center;
-            color: $Color_Cube_butterfly-bush;
+        }
+
+        p {
+            padding: 0 $base_Spacing * 2;
+            text-align: center;
+        }
+    }
+
+    &.grey {
+        background-color: $Median_Cut_bon-jour;
+
+        .flex-container:nth-child(1){
+            align-items: end;
+        }
+    }
+
+    .col-6 {
+        h2 {
+            padding: $base_Spacing 0;
+        }
+
+        h3{
+            padding: $base_Spacing/ 2 $base_Spacing;
         }
 
         p{
-            padding: 0 $base_Spacing*2
+            font-size: $min_font_size;
+            padding: 0 $base_Spacing;
         }
-    }
 
-    &.grey{
-        background-color: $Median_Cut_bon-jour;
+        .flex-container{
+            padding: $base_Spacing;
+        }
+
+        .slider-container{
+            padding: $base_Spacing;
+            position: relative;
+            &:focus,
+            &:active {
+                outline: none;
+            }
+            
+            .btn{
+                position: absolute;
+                top: 120px;
+                z-index: 10;
+
+                img{
+                    width: 25px;
+                    object-fit: contain;
+                }
+
+                &.right{
+                    right: $base_Spacing;
+                }
+            }
+            .img-slider{
+                height: 300px;
+            }
+            .flex-container{
+                justify-content: space-between;
+                padding: 0;
+                padding-top: ($base_Spacing/2) *1.5;
+
+                .square-small-slider{
+                  
+                    img{
+                        padding-bottom: $base_Spacing /2;
+                    }
+
+                    &.underline{
+                        border-bottom: 1px solid $Color_Cube_blaze-orange;
+                      }
+                  
+                }
+            }
+
+        }
     }
 }

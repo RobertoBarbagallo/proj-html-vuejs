@@ -33,7 +33,7 @@
           </nav>
         </div>
       </div>
-      <div class="hero" tabindex="-1" @keyup.left="leftClick" @keyup.right="rightClick(false)">
+      <div class="hero" tabindex="-1" @keyup.left="leftArrow" @keyup.right="rightArrow(false)">
         <transition-group class="img-slider" tag="div" :name="back ? 'slideback' : 'slide'">
           <div class="sliderCenter" :key="heroSliderList[defaultVueImg].id"
             :style="{ backgroundImage: 'url(' + heroSliderList[defaultVueImg].background + ')' }">
@@ -64,39 +64,45 @@
       </section>
       <section>
         <div class="container">
+          <div class="section-header">
             <h1>Welcome to Fable</h1>
             <p>Fable daycare, preschool and kindergarten</p>
             <img class="divider" src="public/imgs/header_divider.png" alt="divider">
-            <div class="flex-container">
-              <div class="col-3">
-                <div class="round orange">
-                  <img src="../public/imgs/schoolbag_alt.png" alt="schoolbag">
-                </div>
-                <h3>Morbi etos</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum non velit a veritatis nulla est repellendus.</p>
+          </div>
+          <div class="flex-container">
+            <div class="col-3">
+              <div class="round orange">
+                <img src="../public/imgs/schoolbag_alt.png" alt="schoolbag">
               </div>
-              <div class="col-3">
-                <div class="round purple">
-                  <img src="../public/imgs/stroller_alt.png" alt="stroller">
-                </div>
-                <h3>Congue gravida</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum non velit a veritatis nulla est repellendus.</p>
-              </div>
-              <div class="col-3">
-                <div class="round orange">
-                  <img src="../public/imgs/globe_alt.png" alt="globe">
-                </div>
-                <h3>Maecenas Node</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum non velit a veritatis nulla est repellendus.</p>
-              </div>
-              <div class="col-3">
-                <div class="round purple">
-                  <img src="../public/imgs/bell_alt.png" alt="bell">
-                </div>
-                <h3>Praesent Morbi</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum non velit a veritatis nulla est repellendus.</p>
-              </div>
+              <h3>Morbi etos</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum non velit a veritatis nulla est
+                repellendus.</p>
             </div>
+            <div class="col-3">
+              <div class="round purple">
+                <img src="../public/imgs/stroller_alt.png" alt="stroller">
+              </div>
+              <h3>Congue gravida</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum non velit a veritatis nulla est
+                repellendus.</p>
+            </div>
+            <div class="col-3">
+              <div class="round orange">
+                <img src="../public/imgs/globe_alt.png" alt="globe">
+              </div>
+              <h3>Maecenas Node</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum non velit a veritatis nulla est
+                repellendus.</p>
+            </div>
+            <div class="col-3">
+              <div class="round purple">
+                <img src="../public/imgs/bell_alt.png" alt="bell">
+              </div>
+              <h3>Praesent Morbi</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum non velit a veritatis nulla est
+                repellendus.</p>
+            </div>
+          </div>
         </div>
       </section>
       <section class="grey">
@@ -105,26 +111,67 @@
             <div class="col-6">
               <div class="btn baloon">Overview</div>
               <div class="btn baloon">Our Mission</div>
+              <h2>Our philosophy il learning through play as we offer a stimulating enviroment for chideren</h2>
+              <div class="flex-container">
+                <div class="round small orange">
+                  <img src="../public/imgs/clock_alt.png" alt="clock">
+                </div>
+                <div class="grow">
+                  <h3>Full day sessions</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus illum in dicta?</p>
+                </div>
+              </div>
+              <div class="flex-container">
+                <div class="round small orange">
+                  <img src="../public/imgs/diagram_alt.png" alt="diagram">
+                </div>
+                <div class="grow">
+                  <h3>Varied classes</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus illum in dicta?</p>
+                </div>
+              </div>
             </div>
-            <div class="col-6"></div>
+
+            <div class="col-6">
+              <div class="slider-container" tabindex="-1">
+                <div class="btn orange" @click="leftClick">
+                  <img src="../public/imgs/slider_previous.png" alt="previous">
+                </div>
+                <div class="btn orange right" @click="rightClick(false)">
+                  <img src="../public/imgs/slider_next.png" alt="next">
+                </div>
+                <transition-group class="img-slider" tag="div" :name="anotherBack ? 'slideback' : 'slide'">
+                  <div :key="sectionSliderList[anotherVueImg].id" class="square-big-slider">
+                    <img :src="sectionSliderList[anotherVueImg].imgPath" alt="img">
+                  </div>
+                </transition-group>
+                <div class="flex-container">
+                  <div @click="divClick(index)" v-for="(pics, index) in lastImg"
+                    :class="{underline: index == anotherVueImg}" class="square-small-slider">
+                    <img :src="sectionSliderList[index].imgPath" alt="small img">
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+  </div>
 
 
 
-      </section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-    </main>
-    <footer></footer>
+  </section>
+  <section></section>
+  <section></section>
+  <section></section>
+  <section></section>
+  <section></section>
+  <section></section>
+  <section></section>
+  <section></section>
+  <section></section>
+  <section></section>
+  </main>
+  <footer></footer>
   </div>
   <script src="scripts/app.js"></script>
 </body>

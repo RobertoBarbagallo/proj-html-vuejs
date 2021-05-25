@@ -1,3 +1,4 @@
+
 new Vue({
   el: "#app",
 
@@ -75,10 +76,34 @@ new Vue({
 
     ],
 
+    sectionSliderList: [
+      {
+        imgPath: "public/imgs/class_01-690x506.jpg",
+        id: 1,
+      },
+      {
+        imgPath: "public/imgs/class_02-690x506.jpg",
+        id: 2,
+      },
+      {
+        imgPath: "public/imgs/class_03-690x506.jpg",
+        id: 3,
+      },
+      // {
+      //   imgPath: "public/imgs/class_04-690x506.jpg",
+      //   id: 4,
+      // },
+    ],
+
     defaultVueImg: 2,
     counter: 0,
     interval: null,
     back: false,
+    anotherVueImg: 0,
+    anotherInterval: null,
+    anotherBack: false,
+    lastImg: 3,
+ 
   },
 
   computed: {
@@ -87,32 +112,32 @@ new Vue({
 
   methods: {
 
-    rightClick(param) {
-      this.back = false
-      if(param == false){
-        clearInterval(this.interval)
+    rightArrow(param) {
+      this.back = false;
+      if (param == false) {
+        clearInterval(this.interval);
         let newIndex = this.defaultVueImg + 1;
         let limite = (this.heroSliderList.length - 1);
-  
+
         if (newIndex > limite) {
           newIndex = 0;
         }
         this.defaultVueImg = newIndex;
-      }else{
+      } else {
         let newIndex = this.defaultVueImg + 1;
         let limite = (this.heroSliderList.length - 1);
-  
+
         if (newIndex > limite) {
           newIndex = 0;
         }
         this.defaultVueImg = newIndex;
       }
-  
+
     },
 
-    leftClick() {
-      this.back = true
-      clearInterval(this.interval)
+    leftArrow() {
+      this.back = true;
+      clearInterval(this.interval);
       let newIndex = this.defaultVueImg - 1;
       let limite = 0;
 
@@ -123,18 +148,63 @@ new Vue({
     },
 
     dotClick(index) {
-      clearInterval(this.interval)
+      clearInterval(this.interval);
       this.defaultVueImg = index;
     },
 
-    autoPlay(){
-      clearInterval(this.interval)
+    leftClick() {
+      this.anotherBack = true;
+      clearInterval(this.anotherInterval);
+      let newIndex = this.anotherVueImg - 1;
+      let limite = 0;
+
+      if (newIndex < limite) {
+        newIndex = (this.sectionSliderList.length - 1);
+      }
+      this.anotherVueImg = newIndex;
+    },
+
+
+    rightClick(param) {
+
+      this.anotherBack = false;
+      if (param == false) {
+        clearInterval(this.anotherInterval);
+        let newIndex = this.anotherVueImg + 1;
+        let limite = (this.sectionSliderList.length - 1);
+
+        if (newIndex > limite) {
+          newIndex = 0;
+        }
+        this.anotherVueImg = newIndex;
+      } else {
+        let newIndex = this.anotherVueImg + 1;
+        let limite = (this.sectionSliderList.length - 1);
+
+        if (newIndex > limite) {
+          newIndex = 0;
+        }
+
+        this.anotherVueImg = newIndex;
+      }
+    },
+
+    divClick(index) {
+      clearInterval(this.anotherInterval);
+      this.anotherVueImg = index;
+    },
+
+    autoPlay() {
+      clearInterval(this.interval);
 
       this.interval = setInterval(() => {
-        this.rightClick(true);
-        }, 4000);
-    }
+        this.rightArrow(true);
+      }, 4000);
 
+      this.anotherInterval = setInterval(() => {
+        this.rightClick(true);
+      }, 4000);
+    },
 
   },
 
@@ -142,8 +212,7 @@ new Vue({
 
     this.autoPlay();
     document.querySelector(".hero").focus();
-
+    document.querySelector(".slider-container").focus();
   },
-
 
 });

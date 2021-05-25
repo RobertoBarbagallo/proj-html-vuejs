@@ -71,6 +71,10 @@ ul {
   padding: 20px 0;
 }
 
+.grow {
+  flex-grow: 1;
+}
+
 .img-slider {
   overflow: hidden;
   position: relative;
@@ -187,18 +191,28 @@ section.withPattern .flex-container {
 }
 section.withPattern .flex-container h2 {
   color: #FEFFFE;
-  font-weight: 100;
   font-size: 30px;
   flex-grow: 1;
+}
+section .section-header {
+  text-align: center;
 }
 section h1,
 section p {
   font-weight: 100;
-  text-align: center;
 }
 section h1 {
   color: #554D9E;
   font-size: 40px;
+}
+section h2 {
+  color: #554D9E;
+  font-weight: 100;
+  font-size: 25px;
+}
+section h3 {
+  padding: 40px 0;
+  color: #554D9E;
 }
 section p {
   color: #262626;
@@ -210,15 +224,64 @@ section .divider {
   padding: 40px;
 }
 section .col-3 h3 {
-  padding: 40px 0;
   text-align: center;
-  color: #554D9E;
 }
 section .col-3 p {
   padding: 0 40px;
+  text-align: center;
 }
 section.grey {
   background-color: #E8E6E7;
+}
+section.grey .flex-container:nth-child(1) {
+  align-items: end;
+}
+section .col-6 h2 {
+  padding: 20px 0;
+}
+section .col-6 h3 {
+  padding: 10px 20px;
+}
+section .col-6 p {
+  font-size: 10px;
+  padding: 0 20px;
+}
+section .col-6 .flex-container {
+  padding: 20px;
+}
+section .col-6 .slider-container {
+  padding: 20px;
+  position: relative;
+}
+section .col-6 .slider-container:focus, section .col-6 .slider-container:active {
+  outline: none;
+}
+section .col-6 .slider-container .btn {
+  position: absolute;
+  top: 120px;
+  z-index: 10;
+}
+section .col-6 .slider-container .btn img {
+  width: 25px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+section .col-6 .slider-container .btn.right {
+  right: 20px;
+}
+section .col-6 .slider-container .img-slider {
+  height: 300px;
+}
+section .col-6 .slider-container .flex-container {
+  justify-content: space-between;
+  padding: 0;
+  padding-top: 15px;
+}
+section .col-6 .slider-container .flex-container .square-small-slider img {
+  padding-bottom: 10px;
+}
+section .col-6 .slider-container .flex-container .square-small-slider.underline {
+  border-bottom: 1px solid #FE6602;
 }
 
 .btn {
@@ -282,6 +345,15 @@ section.grey {
   justify-content: center;
   margin: auto;
 }
+.round.small {
+  width: 75px;
+  height: 75px;
+}
+.round.small img {
+  width: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .round.orange {
   background-color: #FE6602;
 }
@@ -290,6 +362,26 @@ section.grey {
 }
 .round img {
   width: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.square-big-slider {
+  width: 100%;
+  height: 300px;
+}
+.square-big-slider img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.square-small-slider {
+  width: calc((100% / 3) - 10px);
+  height: 100px;
+}
+.square-small-slider img {
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }

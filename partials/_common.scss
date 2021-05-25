@@ -71,3 +71,7 @@ ul{
     width:  calc(100% / 2) ; 
     padding: $base_Spacing 0;
 }
+
+.grow{
+    flex-grow: 1;
+}

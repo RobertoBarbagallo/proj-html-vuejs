@@ -154,7 +154,7 @@
                 <div class="flex-container">
                   <div v-if="sectionSliderList.length > 0" v-for="(pic, index) in sectionSliderList"
                     :class="{underline: index == 1}" class="square-small-slider">
-                    <img  key="sectionSliderList[index].id" :src="sectionSliderList[index].imgPath" alt="small img">
+                    <img key="sectionSliderList[index].id" :src="sectionSliderList[index].imgPath" alt="small img">
                     <div class="img-overlay small round purple transparent">
                       <img src="public/imgs/image_overlay.png" alt="add">
                     </div>
@@ -644,11 +644,110 @@
 
 
       </section>
-      <section></section>
-      <section></section>
-      <section></section>
-    </main>
-    <footer></footer>
+      <section class="white blog">
+        <div class="section-header">
+          <h1>What's New</h1>
+          <p>Keep up to daye with the latest News</p>
+          <img class="divider" src="public/imgs/header_divider.png" alt="divider">
+        </div>
+        <div class="container">
+          <div class="flex-container">
+            <div class="col-4">
+              <p>October 03, 2014</p>
+              <div class="blog-card">
+                <div class="blog-card-img-container">
+                  <img src="../public/imgs/blog_08-690x414.jpg" alt="blog1">
+                  <div class="btn orange">42</div>
+                </div>
+                <h3>Drawing and painting lessons</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi pariatur sint ex esse sed mollitia
+                  obcaecati aliquam, dicta nihil excepturi!</p>
+                <div class="flex-container">
+                  <div class="col-6 flex-container">
+                    <img class="symbol" src="../public/imgs/author.png" alt="author">
+                    <div class="whitespace"></div>
+                    <p>Anna Brown</p>
+                  </div>
+                  <div class="col-6 flex-container">
+                    <img class="symbol" src="../public/imgs/category.png" alt="category">
+                    <div class="whitespace"></div>
+                    <p>Events, fun</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <p>October 03, 2014</p>
+              <div class="blog-card">
+                <div class="blog-card-img-container">
+                  <img src="../public/imgs/blog_09-690x414.jpg" alt="blog1">
+                  <div class="btn orange">19</div>
+                </div>
+
+                <h3>Fall parents meeting day</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi pariatur sint ex esse sed mollitia
+                  obcaecati aliquam, dicta nihil excepturi!</p>
+                <div class="flex-container">
+                  <div class="col-6 flex-container">
+                    <img class="symbol" src="../public/imgs/author.png" alt="author">
+                    <div class="whitespace"></div>
+                    <p>Anna Brown</p>
+                  </div>
+                  <div class="col-6 flex-container">
+                    <img class="symbol" src="../public/imgs/category.png" alt="category">
+                    <div class="whitespace"></div>
+                    <p>Events, fun</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <p>October 03, 2014</p>
+              <div class="blog-card">
+                <div class="blog-card-img-container">
+                  <img src="../public/imgs/blog_10-690x414.jpg" alt="blog2">
+                  <div class="btn orange">22</div>
+                </div>
+
+                <h3>Birthday in kindergarten</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi pariatur sint ex esse sed mollitia
+                  obcaecati aliquam, dicta nihil excepturi!</p>
+                <div class="flex-container">
+                  <div class="col-6 flex-container">
+                    <img class="symbol" src="../public/imgs/author.png" alt="author">
+                    <div class="whitespace"></div>
+                    <p>Anna Brown</p>
+                  </div>
+                  <div class="col-6 flex-container">
+                    <img class="symbol" src="../public/imgs/category.png" alt="category">
+                    <div class="whitespace"></div>
+                    <p>Events, fun</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn orange">GO TO BLOG
+          <i class="fas fa-chevron-right"></i>
+        </div>
+  </div>
+  </section>
+  <section>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179638.08495854924!2d-75.95746749327928!3d45.29135222311831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccdfdfbe5577ca1%3A0x940f718a943b9c8b!2sNepean%2C%20Ottawa%2C%20Ontario%2C%20Canada!5e0!3m2!1sit!2sit!4v1622019474176!5m2!1sit!2sit"
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+  <section class="white contact">
+    <div class="section-header">
+      <h1>Contact us</h1>
+      <p>Our postal address and contact details</p>
+      <img class="divider" src="public/imgs/header_divider.png" alt="divider">
+    </div>
+
+  </section>
+  </main>
+  <footer></footer>
   </div>
   <script src="scripts/app.js"></script>
 </body>

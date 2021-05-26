@@ -63,6 +63,15 @@ ul {
 
 .col-3 {
     width: calc(100% / 4);
+    margin: auto;
+    img{
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.col-4{
+    width: calc(100% / 3);
     img{
         width: 100%;
         object-fit: contain;
@@ -110,7 +119,6 @@ ul {
 .card{
     height: 180px;
     margin: $base_Spacing/2 0;
-    // align-items: center;
     h4{
         color: $Color_Cube_sugar_cane;
     }

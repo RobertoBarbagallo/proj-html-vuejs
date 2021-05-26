@@ -4,6 +4,7 @@
     font-size: $min_font_size * 1.5;
     color: $Color_Cube_sugar_cane;
     transition: .3s;
+    width: fit-content;
 
     i {
         &.fa-chevron-right {

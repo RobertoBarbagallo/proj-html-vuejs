@@ -63,8 +63,18 @@ ul {
 
 .col-3 {
   width: calc(100% / 4);
+  margin: auto;
 }
 .col-3 img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.col-4 {
+  width: calc(100% / 3);
+}
+.col-4 img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -395,7 +405,8 @@ section .classes > .col-6 {
 section.gallery {
   padding: 0;
 }
-section.white h2:not(.section-header h2, .section-header p, .main-card-text-conttainer p), section.white p:not(.section-header h2, .section-header p, .main-card-text-conttainer p) {
+section.white h2:not(.section-header h2, .section-header p, .main-card-text-conttainer p, .blog p),
+section.white p:not(.section-header h2, .section-header p, .main-card-text-conttainer p, .blog p) {
   height: 120px;
 }
 section.card-section .col-6 {
@@ -427,7 +438,8 @@ section.card-section .main-card-text-conttainer .quote-div img {
 section.card-section .card-footer .col-6 {
   padding: 0;
 }
-section.card-section .card-footer h3, section.card-section .card-footer p {
+section.card-section .card-footer h3,
+section.card-section .card-footer p {
   padding: 0;
   width: 100%;
   text-align: center;
@@ -450,7 +462,8 @@ section.parallax {
   position: relative;
 }
 section.parallax h3,
-section.parallax p, section.parallax h2 {
+section.parallax p,
+section.parallax h2 {
   color: #FEFFFE;
 }
 section.parallax h3 {
@@ -480,6 +493,53 @@ section.parallax.kindergarten p {
   padding: 20px;
   font-weight: 400;
 }
+section.blog .section-header p {
+  margin: 0;
+  text-align: center;
+}
+section.blog p {
+  margin-left: 20px;
+  text-align: left;
+}
+section.blog .btn {
+  margin: auto;
+}
+section.blog .blog-card {
+  width: 270px;
+  margin: 20px;
+}
+section.blog .blog-card .blog-card-img-container {
+  position: relative;
+}
+section.blog .blog-card h3,
+section.blog .blog-card p {
+  text-align: left;
+}
+section.blog .blog-card h3 {
+  padding: 0;
+}
+section.blog .blog-card > p {
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #262626;
+}
+section.blog .blog-card img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+section.blog .blog-card img.symbol {
+  width: 20px;
+}
+section.blog .blog-card .col-6 {
+  padding: 20px 5px;
+}
+section.blog .blog-card .btn {
+  display: block;
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+}
 
 .btn {
   display: flex;
@@ -488,6 +548,9 @@ section.parallax.kindergarten p {
   font-size: 15px;
   color: #FEFFFE;
   transition: 0.3s;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .btn i.fa-chevron-right {
   padding-left: 10px;

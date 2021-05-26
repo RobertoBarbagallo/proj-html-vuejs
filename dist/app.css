@@ -148,6 +148,10 @@ ul {
   border-top: 1px solid #FEFFFE;
 }
 
+.static-container {
+  height: 180px;
+}
+
 .img-slider {
   overflow: hidden;
   position: relative;
@@ -540,6 +544,9 @@ section.blog .blog-card .btn {
   bottom: 5px;
   right: 0;
 }
+section.contact {
+  margin: 40px 0;
+}
 section.contact h3 {
   padding: 6.6666666667px 0;
 }
@@ -572,6 +579,73 @@ section.contact .onsubmit {
 }
 .input-area .btn {
   margin: auto;
+}
+
+footer {
+  background: url(/images/pattern.png?c31af566a88c6ef9c64468b652153e7b);
+  padding: 60px 0;
+}
+footer h2, footer p {
+  color: #FEFFFE;
+  padding: 10px 0;
+}
+footer .as-hr {
+  width: 50%;
+  margin: 0;
+}
+footer h2 {
+  font-size: 20px;
+}
+footer p {
+  font-size: 15px;
+  font-weight: 100;
+}
+footer .my-table {
+  padding: 10px 0;
+}
+footer .my-table .tc {
+  padding: 10px;
+  color: #FEFFFE;
+  border: 1px solid #FEFFFE;
+}
+footer .row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+footer .float {
+  float: left;
+  padding: 0 10px;
+}
+footer .checklist {
+  display: flex;
+  align-items: center;
+}
+footer .checklist img {
+  width: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+footer .activities {
+  padding: 10px 0;
+  display: flex;
+}
+footer .activities img {
+  width: 70px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+footer .activities .text {
+  padding-left: 10px;
+}
+footer .activities .text h4 {
+  color: #FEFFFE;
+}
+footer .activities .text .date {
+  width: 15px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 10px;
 }
 
 .btn {
@@ -734,6 +808,15 @@ section.contact .onsubmit {
   margin: auto;
 }
 .small-img-container img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.small-logo-container {
+  width: 150px;
+}
+.small-logo-container img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;

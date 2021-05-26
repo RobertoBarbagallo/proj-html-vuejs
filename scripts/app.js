@@ -104,7 +104,62 @@ new Vue({
     UserEmail: "",
     UserSubject: "",
     UserMessage: "",
-    submit: false
+    submit: false,
+    storedData: [
+      {
+        year: 2104,
+        month: "October",
+        numbersOfData: 2,
+
+      },
+      {
+        year: 2104,
+        month: "September",
+        numbersOfData: 2,
+
+      },
+      {
+        year: 2104,
+        month: "August",
+        numbersOfData: 2,
+
+      },
+      {
+        year: 2104,
+        month: "July",
+        numbersOfData: 2,
+
+      },
+      {
+        year: 2104,
+        month: "June",
+        numbersOfData: 2,
+
+      },
+      {
+        year: 2104,
+        month: "May",
+        numbersOfData: 2,
+
+      },
+    ],
+    recentPosts: [
+      {
+        imgPath: "../public/imgs/blog_08-150x150.jpg",
+        title: "Drawing and painting Lessons",
+        day: "10/03/2014",
+      },
+      {
+        imgPath: "../public/imgs/blog_09-150x150.jpg",
+        title: "Fall Parents Meeting Day",
+        day: "10/03/2014",
+      },
+      {
+        imgPath: "../public/imgs/blog_10-150x150.jpg",
+        title: "Birthday in kindergarten",
+        day: "9/20/2014",
+      },
+    ]
   },
 
   computed: {

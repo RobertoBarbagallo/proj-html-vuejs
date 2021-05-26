@@ -19,6 +19,11 @@
         flex-direction: column;
         justify-content: space-between;
     }
+
+    textarea{
+        padding-top: $base_Spacing/2;
+    }
+    
     .btn{
         margin: auto;
     }

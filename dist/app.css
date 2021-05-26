@@ -577,6 +577,9 @@ section.contact .onsubmit {
   flex-direction: column;
   justify-content: space-between;
 }
+.input-area textarea {
+  padding-top: 10px;
+}
 .input-area .btn {
   margin: auto;
 }

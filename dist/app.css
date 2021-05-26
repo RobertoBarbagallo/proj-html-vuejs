@@ -359,6 +359,9 @@ section.grey .col-6 .slider-container .flex-container {
 section.grey .col-6 .slider-container .flex-container .square-small-slider {
   position: relative;
 }
+section.grey .col-6 .slider-container .flex-container .square-small-slider:last-child {
+  display: none;
+}
 section.grey .col-6 .slider-container .flex-container .square-small-slider img {
   padding-bottom: 10px;
 }

@@ -144,19 +144,20 @@
                 <div class="btn orange right" @click="rightClick(false)">
                   <img src="../public/imgs/slider_next.png" alt="next">
                 </div>
-                <transition-group class="img-slider" tag="div" :name="anotherBack ? 'slideback' : 'slide'">
-                  <div :key="sectionSliderList[anotherVueImg].id" class="square-big-slider">
-                    <img :src="sectionSliderList[anotherVueImg].imgPath" alt="img">
-                    <div class="img-overlay round purple transparent">
-                      <img src="public/imgs/image_overlay.png" alt="add">
-                    </div>
+
+                <div class="square-big-slider">
+                  <img :src="sectionSliderList[1].imgPath" alt="img">
+                  <div class="img-overlay round purple transparent">
+                    <img src="public/imgs/image_overlay.png" alt="add">
                   </div>
-                </transition-group>
+                </div>
+
                 <div class="flex-container">
-                  <div @click="divClick(index)" v-for="(pics, index) in lastImg"
-                    :class="{underline: index == anotherVueImg}" class="square-small-slider">
+                  <div v-if="sectionSliderList.length > 0" v-for="(pic, index) in clonedList[0]"
+                    :class="{underline: pic[index] == 0}" class="square-small-slider">
                     <img :src="sectionSliderList[index].imgPath" alt="small img">
                     <div class="img-overlay small round purple transparent">
+                      {{pic.id}}
                       <img src="public/imgs/image_overlay.png" alt="add">
                     </div>
                   </div>
@@ -274,8 +275,8 @@
                   </div>
                 </div>
               </div>
-          </div>
-          <div class="col-6 flex-container fd-column">
+            </div>
+            <div class="col-6 flex-container fd-column">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum id, omnis laboriosam eos
                 temporibus
                 nisi? Ut, veniam natus! Maiores ad excepturi ipsam quas rerum consectetur vel, corrupti exercitationem
@@ -491,7 +492,7 @@
                       <div class="btn orange">
                         <img src="../public/imgs/pinterest.png" alt="pinterest">
                       </div>
-                      
+
                     </div>
                   </div>
                 </div>
@@ -530,14 +531,16 @@
                       <div class="btn orange">
                         <img src="../public/imgs/linkedin.png" alt="linkedin">
                       </div>
-                      
+
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-6 flex-container fd-column">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam distinctio repellat necessitatibus et quia voluptatem saepe sint voluptates earum reprehenderit, velit accusamus similique repudiandae iure ratione neque veniam optio rerum quod modi?</p>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam distinctio repellat necessitatibus
+                et quia voluptatem saepe sint voluptates earum reprehenderit, velit accusamus similique repudiandae iure
+                ratione neque veniam optio rerum quod modi?</p>
               <div class="flex-container fd-column">
                 <div class="flex-container main-card">
                   <div class="col-6 main-card-img-container">
@@ -572,7 +575,7 @@
                       <div class="btn orange">
                         <img src="../public/imgs/stumbleupon.png" alt="stumbleupon">
                       </div>
-                      
+
                     </div>
                   </div>
                 </div>
@@ -611,7 +614,7 @@
                       <div class="btn orange">
                         <img src="../public/imgs/googleplus.png" alt="googleplus">
                       </div>
-                      
+
                     </div>
                   </div>
                 </div>
@@ -626,7 +629,8 @@
           <div class="round transparent small">
             <img src="../public/imgs/quote_alt.png" alt="">
           </div>
-          <h2 class="ta-center">Fable Kindergarten is a great place for my daughter to start her schooling experince. It's welcoming and safe and my daughter loves being there.</h2>
+          <h2 class="ta-center">Fable Kindergarten is a great place for my daughter to start her schooling experince.
+            It's welcoming and safe and my daughter loves being there.</h2>
           <div class="as-hr"></div>
           <p class="ta-center">Joe R. Hamblen</p>
           <div class="dotsContainer">
@@ -638,9 +642,9 @@
             <div class="dot"></div>
           </div>
         </div>
-        </div>
 
-       
+
+
       </section>
       <section></section>
       <section></section>

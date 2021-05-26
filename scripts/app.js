@@ -79,35 +79,31 @@ new Vue({
     sectionSliderList: [
       {
         imgPath: "public/imgs/class_01-690x506.jpg",
-        id: 1,
+        // id: 0,
       },
       {
         imgPath: "public/imgs/class_02-690x506.jpg",
-        id: 2,
+        // id: 1,
       },
       {
         imgPath: "public/imgs/class_03-690x506.jpg",
-        id: 3,
+        // id: 2,
       },
-      // {
-      //   imgPath: "public/imgs/class_04-690x506.jpg",
-      //   id: 4,
-      // },
+      {
+        imgPath: "public/imgs/class_04-690x506.jpg",
+        // id: 3,
+      },
     ],
-
+    firstCopy: [],
+    clonedList: [],
     defaultVueImg: 2,
-    counter: 0,
     interval: null,
     back: false,
-    anotherVueImg: 0,
+    anotherVueImg: 3,
     anotherInterval: null,
-    anotherBack: false,
-    lastImg: 3,
- 
   },
 
   computed: {
-
   },
 
   methods: {
@@ -117,7 +113,7 @@ new Vue({
       if (!param) {
         clearInterval(this.interval);
       }
-    
+
       let newIndex = this.defaultVueImg + 1;
       let limite = (this.heroSliderList.length - 1);
 
@@ -125,7 +121,7 @@ new Vue({
         newIndex = 0;
       }
       this.defaultVueImg = newIndex;
-      
+
 
     },
 
@@ -147,32 +143,42 @@ new Vue({
     },
 
     leftClick() {
-      this.anotherBack = true;
-      clearInterval(this.anotherInterval);
-      let newIndex = this.anotherVueImg - 1;
+      this.anotherVueImg--;
       let limite = 0;
-
-      if (newIndex < limite) {
-        newIndex = (this.sectionSliderList.length - 1);
+      if (this.anotherVueImg < limite) {
+        this.anotherVueImg = this.sectionSliderList.length -1
+        this.array_Move(this.sectionSliderList, 3, 0);
+      } else {
+        this.anotherVueImg = this.sectionSliderList.length -1
+        this.array_Move(this.sectionSliderList, 3, 0);
       }
-      this.anotherVueImg = newIndex;
     },
 
 
     rightClick(param) {
-
-      this.anotherBack = false;
       if (!param) {
-        clearInterval(this.anotherInterval)
+        clearInterval(this.anotherInterval);
       }
-      let newIndex = this.anotherVueImg + 1;
-      let limite = (this.sectionSliderList.length - 1);
+      this.anotherVueImg++;
+      let limite = this.sectionSliderList.length - 1;
+      if (this.anotherVueImg < limite) {
+        this.anotherVueImg++;
+        this.array_Move(this.sectionSliderList, 0, 3);
+      } else {
+        this.anotherVueImg = 0;
+        this.array_Move(this.sectionSliderList, 0, 3);
+      }
+    },
 
-      if (newIndex > limite) {
-          newIndex = 0;
+    array_Move(arr, old_index, new_index) {
+      if (new_index >= arr.length) {
+        var k = new_index - arr.length + 1;
+        while (k--) {
+          arr.push(arr[old_index]);
+        }
       }
-      this.anotherVueImg = newIndex;
-     
+      arr.splice(new_index, 0, arr.splice(old_index, 1)[0]);
+      return arr;
     },
 
     divClick(index) {
@@ -189,13 +195,15 @@ new Vue({
 
       this.anotherInterval = setInterval(() => {
         this.rightClick(true);
-      }, 4000);
+      }, 6000);
     },
 
   },
 
-  mounted() {
 
+  mounted() {
+    const copy = [...this.sectionSliderList];
+    this.$set(this.clonedList, 0, copy);
     this.autoPlay();
     document.querySelector(".hero").focus();
     document.querySelector(".slider-container").focus();

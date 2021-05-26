@@ -366,7 +366,7 @@ section.grey .col-6 .slider-container .flex-container .square-small-slider img {
   padding-bottom: 10px;
 }
 section.grey .col-6 .slider-container .flex-container .square-small-slider.underline {
-  border-bottom: 1px solid #FE6602;
+  border-bottom: 2px solid #FE6602;
 }
 section.grey .col-6 .slider-container .flex-container .square-small-slider:hover .img-overlay {
   visibility: visible;
@@ -587,8 +587,7 @@ section.parallax.kindergarten p {
 }
 
 .square-small-slider {
-  width: calc((100% / 3) - 10px);
-  height: 100px;
+  width: calc((100% / 3) - 15px);
 }
 .square-small-slider img {
   width: 100%;

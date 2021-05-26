@@ -144,7 +144,6 @@
                 <div class="btn orange right" @click="rightClick(false)">
                   <img src="../public/imgs/slider_next.png" alt="next">
                 </div>
-
                 <div class="square-big-slider">
                   <img :src="sectionSliderList[1].imgPath" alt="img">
                   <div class="img-overlay round purple transparent">
@@ -153,11 +152,10 @@
                 </div>
 
                 <div class="flex-container">
-                  <div v-if="sectionSliderList.length > 0" v-for="(pic, index) in clonedList[0]"
-                    :class="{underline: pic[index] == 0}" class="square-small-slider">
-                    <img :src="sectionSliderList[index].imgPath" alt="small img">
+                  <div v-if="sectionSliderList.length > 0" v-for="(pic, index) in sectionSliderList"
+                    :class="{underline: index == 1}" class="square-small-slider">
+                    <img  key="sectionSliderList[index].id" :src="sectionSliderList[index].imgPath" alt="small img">
                     <div class="img-overlay small round purple transparent">
-                      {{pic.id}}
                       <img src="public/imgs/image_overlay.png" alt="add">
                     </div>
                   </div>

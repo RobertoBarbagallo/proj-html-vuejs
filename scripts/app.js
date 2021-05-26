@@ -79,19 +79,19 @@ new Vue({
     sectionSliderList: [
       {
         imgPath: "public/imgs/class_01-690x506.jpg",
-        // id: 0,
+        id: 0,
       },
       {
         imgPath: "public/imgs/class_02-690x506.jpg",
-        // id: 1,
+        id: 1,
       },
       {
         imgPath: "public/imgs/class_03-690x506.jpg",
-        // id: 2,
+        id: 2,
       },
       {
         imgPath: "public/imgs/class_04-690x506.jpg",
-        // id: 3,
+        id: 3,
       },
     ],
     firstCopy: [],
@@ -101,6 +101,7 @@ new Vue({
     back: false,
     anotherVueImg: 3,
     anotherInterval: null,
+    anotherBack: false
   },
 
   computed: {
@@ -143,6 +144,7 @@ new Vue({
     },
 
     leftClick() {
+      this.anotherBack= true
       this.anotherVueImg--;
       let limite = 0;
       if (this.anotherVueImg < limite) {
@@ -156,6 +158,7 @@ new Vue({
 
 
     rightClick(param) {
+      this.anotherBack= false
       if (!param) {
         clearInterval(this.anotherInterval);
       }

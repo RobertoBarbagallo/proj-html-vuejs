@@ -142,14 +142,11 @@ section {
                             display: none;
                         }
                         img {
-                            padding-bottom: $base_Spacing / 2;
+                            padding-bottom: $base_Spacing/2;
 
                         }
-
-                      
-
                         &.underline {
-                            border-bottom: 1px solid $Color_Cube_blaze-orange;
+                            border-bottom: 2px solid $Color_Cube_blaze-orange;
                         }
 
                         &:hover {

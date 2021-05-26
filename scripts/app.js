@@ -94,14 +94,17 @@ new Vue({
         id: 3,
       },
     ],
-    firstCopy: [],
-    clonedList: [],
+ 
     defaultVueImg: 2,
     interval: null,
     back: false,
     anotherVueImg: 3,
     anotherInterval: null,
-    anotherBack: false
+    UserName: "",
+    UserEmail: "",
+    UserSubject: "",
+    UserMessage: "",
+    submit: false
   },
 
   computed: {
@@ -143,22 +146,7 @@ new Vue({
       this.defaultVueImg = index;
     },
 
-    leftClick() {
-      this.anotherBack= true
-      this.anotherVueImg--;
-      let limite = 0;
-      if (this.anotherVueImg < limite) {
-        this.anotherVueImg = this.sectionSliderList.length -1
-        this.array_Move(this.sectionSliderList, 3, 0);
-      } else {
-        this.anotherVueImg = this.sectionSliderList.length -1
-        this.array_Move(this.sectionSliderList, 3, 0);
-      }
-    },
-
-
     rightClick(param) {
-      this.anotherBack= false
       if (!param) {
         clearInterval(this.anotherInterval);
       }
@@ -173,6 +161,23 @@ new Vue({
       }
     },
 
+    leftClick() {
+      this.anotherVueImg--;
+      let limite = 0;
+      if (this.anotherVueImg < limite) {
+        this.anotherVueImg = this.sectionSliderList.length -1
+        this.array_Move(this.sectionSliderList, 3, 0);
+      } else {
+        this.anotherVueImg = this.sectionSliderList.length -1
+        this.array_Move(this.sectionSliderList, 3, 0);
+      }
+    },
+
+    divClick(index) {
+      clearInterval(this.anotherInterval);
+      this.anotherVueImg = index;
+    },
+
     array_Move(arr, old_index, new_index) {
       if (new_index >= arr.length) {
         var k = new_index - arr.length + 1;
@@ -182,11 +187,6 @@ new Vue({
       }
       arr.splice(new_index, 0, arr.splice(old_index, 1)[0]);
       return arr;
-    },
-
-    divClick(index) {
-      clearInterval(this.anotherInterval);
-      this.anotherVueImg = index;
     },
 
     autoPlay() {
@@ -200,13 +200,17 @@ new Vue({
         this.rightClick(true);
       }, 6000);
     },
-
+    formSubmit(){
+      if(this.UserName && this.UserEmail && this.UserSubject && this.UserMessage){
+        this.submit = true
+      }else{
+        alert("Please fill all fields")
+      }
+    }
   },
 
 
   mounted() {
-    const copy = [...this.sectionSliderList];
-    this.$set(this.clonedList, 0, copy);
     this.autoPlay();
     document.querySelector(".hero").focus();
     document.querySelector(".slider-container").focus();

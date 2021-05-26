@@ -731,23 +731,70 @@
         <div class="btn orange">GO TO BLOG
           <i class="fas fa-chevron-right"></i>
         </div>
-  </div>
-  </section>
-  <section>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179638.08495854924!2d-75.95746749327928!3d45.29135222311831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccdfdfbe5577ca1%3A0x940f718a943b9c8b!2sNepean%2C%20Ottawa%2C%20Ontario%2C%20Canada!5e0!3m2!1sit!2sit!4v1622019474176!5m2!1sit!2sit"
-      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-  </section>
-  <section class="white contact">
-    <div class="section-header">
-      <h1>Contact us</h1>
-      <p>Our postal address and contact details</p>
-      <img class="divider" src="public/imgs/header_divider.png" alt="divider">
-    </div>
-
-  </section>
-  </main>
-  <footer></footer>
+      </section>
+      <section>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179638.08495854924!2d-75.95746749327928!3d45.    1!3m3!1m2!1s0x4ccdfdfbe5577ca1%3A0x940f718a943b9c8b!2sNepean%2C%20Ottawa%2C%20Ontario%2C%20Canada!5e0!3m2!1sit!2sit!4v1622  019474176!5m2!1sit!2sit"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </section>
+      <section class="white contact">
+        <div class="section-header">
+          <h1>Contact us</h1>
+          <p>Our postal address and contact details</p>
+          <img class="divider" src="public/imgs/header_divider.png" alt="divider">
+        </div>
+        <div class="container">
+          <div class="flex-container">
+            <div class="col-3">
+              <div class="small-img-container">
+                <img src="../public/imgs/envelope (1).png" alt="mail">
+              </div>
+              <h3 class="ta-center">Postal adderss</h3>
+              <p>Fable Care Center 85 Fentiman Ave Ottawa ON K1 50T7</p>
+            </div>
+            <div class="col-3">
+              <div class="small-img-container">
+                <img src="../public/imgs/mobile.png" alt="mobile">
+              </div>
+              <h3 class="ta-center">Postal adderss</h3>
+              <p>Fable Care Center 85 Fentiman Ave Ottawa ON K1 50T7</p>
+            </div>
+            <div class="col-3">
+              <div class="small-img-container">
+                <img src="public/imgs/clock.png" alt="clock">
+              </div>
+              <h3 class="ta-center">Postal adderss</h3>
+              <p>Fable Care Center 85 Fentiman Ave Ottawa ON K1 50T7</p>
+            </div>
+            <div class="col-3">
+              <div class="small-img-container">
+                <img src="public/imgs/document (1).png" alt="document">
+              </div>
+              <h3 class="ta-center">Postal adderss</h3>
+              <p>Fable Care Center 85 Fentiman Ave Ottawa ON K1 50T7</p>
+            </div>
+          </div>
+          <div v-if="!submit" class="input-area">
+            <div class="flex-container">
+              <div class="col-6">
+                <div class="input-left">
+                  <input type="text" name="name" id="name" v-model="UserName" placeholder="Your Name">
+                  <input type="e-mail" name="email" id="email" v-model="UserEmail" placeholder="Your E-Mail">
+                  <input type="text" name="subject" id="subject" v-model="UserSubject" placeholder="Subject">
+                </div>
+              </div>
+              <div class="col-6">
+                <textarea name="message" id="message" v-model="UserMessage" placeholder="Your Message"></textarea>
+              </div>
+            </div>
+            <div @click="formSubmit()" class="btn orange">SEND MESSAGE</div>
+          </div>
+          <div v-else class="onsubmit">
+            <h1>Thanks for contacting us, {{UserName}}</h1>
+          </div>
+      </section>
+    </main>
+    <footer></footer>
   </div>
   <script src="scripts/app.js"></script>
 </body>

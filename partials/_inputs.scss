@@ -1,0 +1,26 @@
+.input-area{
+    height: 250px;
+    
+    input{
+        width: 100%;
+        display: block;
+        padding: $base_Spacing/2 0 $base_Spacing/6 $base_Spacing/2;
+    }
+
+    .input-left, textarea{
+        width: 90%;
+        margin: auto;
+        height: 200px;
+        padding-left: $base_Spacing/2;
+    }
+
+    .input-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .btn{
+        margin: auto;
+    }
+
+}

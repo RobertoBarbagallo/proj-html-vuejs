@@ -540,6 +540,39 @@ section.blog .blog-card .btn {
   bottom: 5px;
   right: 0;
 }
+section.contact h3 {
+  padding: 6.6666666667px 0;
+}
+section.contact .btn {
+  margin: auto;
+}
+section.contact .onsubmit {
+  height: 250px;
+  text-align: center;
+}
+
+.input-area {
+  height: 250px;
+}
+.input-area input {
+  width: 100%;
+  display: block;
+  padding: 10px 0 3.3333333333px 10px;
+}
+.input-area .input-left, .input-area textarea {
+  width: 90%;
+  margin: auto;
+  height: 200px;
+  padding-left: 10px;
+}
+.input-area .input-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.input-area .btn {
+  margin: auto;
+}
 
 .btn {
   display: flex;
@@ -694,4 +727,14 @@ section.blog .blog-card .btn {
   -o-object-fit: contain;
      object-fit: contain;
   padding: 0;
+}
+
+.small-img-container {
+  width: 30px;
+  margin: auto;
+}
+.small-img-container img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }

@@ -190,7 +190,7 @@ section {
     &.white {
         h2,
         p {
-            &:not(.section-header h2, .section-header p, .main-card-text-conttainer p, .blog p) {
+            &:not(.section-header h2, .section-header p, .main-card-text-conttainer p, .card-footer p, .blog p) {
                 height: 120px;
             }
         }

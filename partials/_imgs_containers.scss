@@ -16,6 +16,11 @@
         }
     }
 
+    &.medium{
+        width: 100px;
+        height: 100px;;
+    }
+
     &.orange{
         background-color: $Color_Cube_blaze-orange;
     }

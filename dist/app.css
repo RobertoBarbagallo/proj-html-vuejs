@@ -409,8 +409,8 @@ section .classes > .col-6 {
 section.gallery {
   padding: 0;
 }
-section.white h2:not(.section-header h2, .section-header p, .main-card-text-conttainer p, .blog p),
-section.white p:not(.section-header h2, .section-header p, .main-card-text-conttainer p, .blog p) {
+section.white h2:not(.section-header h2, .section-header p, .main-card-text-conttainer p, .card-footer p, .blog p),
+section.white p:not(.section-header h2, .section-header p, .main-card-text-conttainer p, .card-footer p, .blog p) {
   height: 120px;
 }
 section.card-section .col-6 {

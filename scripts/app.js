@@ -180,8 +180,6 @@ new Vue({
         newIndex = 0;
       }
       this.defaultVueImg = newIndex;
-
-
     },
 
     leftArrow() {
@@ -255,6 +253,7 @@ new Vue({
         this.rightClick(true);
       }, 6000);
     },
+    
     formSubmit(){
       if(this.UserName && this.UserEmail && this.UserSubject && this.UserMessage){
         this.submit = true

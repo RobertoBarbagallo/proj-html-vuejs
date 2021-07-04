@@ -145,17 +145,17 @@ new Vue({
     ],
     recentPosts: [
       {
-        imgPath: "../public/imgs/blog_08-150x150.jpg",
+        imgPath: "public/imgs/blog_08-150x150.jpg",
         title: "Drawing and painting Lessons",
         day: "10/03/2014",
       },
       {
-        imgPath: "../public/imgs/blog_09-150x150.jpg",
+        imgPath: "public/imgs/blog_09-150x150.jpg",
         title: "Fall Parents Meeting Day",
         day: "10/03/2014",
       },
       {
-        imgPath: "../public/imgs/blog_10-150x150.jpg",
+        imgPath: "public/imgs/blog_10-150x150.jpg",
         title: "Birthday in kindergarten",
         day: "9/20/2014",
       },

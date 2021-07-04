@@ -10,7 +10,7 @@ header {
                 @include flex_default;
                 padding: $base_Spacing * 3 $base_Spacing $base_Spacing $base_Spacing;
                 flex-direction: column;
-                transition: .3s;
+                transition: .5s;
 
                 img {
                     width: 25px;
@@ -43,7 +43,7 @@ header {
         .sliderCenter {
             width: 100%;
             height: 600px;
-            background-image: url(../public/imgs/slider_slide3_background.png);
+            background-image: url("../../public/imgs/slider_slide3_background.png");
             object-fit: contain;
             background-repeat: repeat-x;
             display: flex;
